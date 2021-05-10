@@ -51,7 +51,7 @@ const routes: React.FC = () => {
           component={DetailReceivement}
           isPrivate
         />
-        <Route path="/401" component={NotAuthorized} />
+        <Route path="/505" component={NotAuthorized} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
     </BrowserRouter>

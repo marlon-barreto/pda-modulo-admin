@@ -16,7 +16,7 @@ const SignIn: React.FC = () => {
     const param = query.get('p_param');
     // if (!auth.user) {
     if (!param) {
-      history.push('/404');
+      history.push('/505');
     } else {
       const params = param?.split('|');
       if (params.length === 2) {
@@ -24,15 +24,15 @@ const SignIn: React.FC = () => {
           .signIn({ module: params[1], user: params[0] })
           .then(response => {
             if (!response.name && response.active) {
-              history.push('/404');
+              history.push('/505');
             } else {
               history.push('/Profile');
             }
           })
           .catch(err => {
-            console.log('ERROR');
-            console.log(err);
-            history.push('/404');
+            // console.log('ERROR');
+            // console.log(err);
+            history.push('/505');
           });
       }
     }

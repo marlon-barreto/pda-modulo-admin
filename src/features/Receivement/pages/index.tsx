@@ -191,14 +191,6 @@ const Receivement: React.FC = () => {
                   },
                   {
                     width: 33,
-                    label: 'Status',
-                    name: 'status.code',
-                    type: 'select',
-                    placeholder: 'Selecione o Status',
-                    options: statusList,
-                  },
-                  {
-                    width: 33,
                     label: 'Data:',
                     type: 'date',
                     name: 'dataReceibmento',
@@ -207,11 +199,11 @@ const Receivement: React.FC = () => {
                   },
                   {
                     width: 33,
-                    label: 'Data Final:',
-                    type: 'date',
-                    name: 'dataReceibmentoFim',
-                    placeholder: 'Digite a Data de recebimento',
-                    messageErrorOnBlur: 'Digite um data de recebimento',
+                    label: 'Status',
+                    name: 'status.code',
+                    type: 'select',
+                    placeholder: 'Selecione o Status',
+                    options: statusList,
                   },
                 ]}
               />

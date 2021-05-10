@@ -30,9 +30,10 @@ export const Container = styled.div<ContainerProps>`
 
     .progress-bar-value {
       background-color: ${(props: ContainerProps) => {
-        const breaks = props.breakPoints || [0, 30, 70, 90];
+        const breaks = props.breakPoints || [0, 1, 30, 70, 90];
         const colors = props.breakPointColors || [
           'rgba(216, 216, 216, 1)',
+          'rgba(253, 244, 33, 1)',
           'rgba(248, 205, 53, 1)',
           'rgba(55, 239, 39, 0.3)',
           'rgba(55, 239, 39, 1)',

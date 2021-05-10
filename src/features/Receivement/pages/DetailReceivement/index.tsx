@@ -10,7 +10,7 @@ import {
 } from '../../../../styles/PageStyles/List';
 
 import Breadcrumb from '../../../../components/Breadcrumb';
-import PopUpWindow from '../../../../components/PopUpWindow';
+import PopUpWindowProduct from '../../../../components/PopUpWindowProduct';
 import Table from '../../../../components/Table';
 import LoadingComponent from '../../../../components/LoadingComponent';
 import TitleWithButtons from '../../../../components/TitleWithButtons';
@@ -19,6 +19,7 @@ import IconProduto from '../../../../assets/svg/produto.svg';
 
 import api from '../../../../services/api';
 import apiReceivement from '../../../../services/receivement';
+import SearchIcon from '../../../../assets/svg/SearchGrid.svg';
 
 interface ReceivementItem {
   id: string;
@@ -59,6 +60,7 @@ interface DetalheProdutoItem {
   QuantidadeColetado: number;
   QuantidadeDivergencia: number;
   Status: string;
+  Acao: boolean;
 }
 
 const DetailReceivement: React.FC = () => {
@@ -68,6 +70,10 @@ const DetailReceivement: React.FC = () => {
     [] as DetalheCaixaItem[]
   );
 
+  const [detailReceivementProduct, setDetailReceivementProduct] = useState(
+    [] as DetalheProdutoItem[]
+  );
+
   const [loading, setLoading] = useState(true);
   const [porcentagemProgresso, setPorcentagemProgresso] = useState(
     NaN as number
@@ -75,12 +81,22 @@ const DetailReceivement: React.FC = () => {
   const { code } = useParams<Record<string, string | undefined>>();
 
   const { ToastError, Toastsuccess } = useToast();
+
+  const [productDetail, setProductDetail] = useState(NaN as number);
+
   const history = useHistory();
 
   const transformDetailReceivement = useCallback(array => {
     return array.map((item: DetalheCaixaItem) => ({
       ...item,
       id: item.Ordem,
+    }));
+  }, []);
+
+  const transformDetailReceivementProduct = useCallback(array => {
+    return array.map((item: DetalheProdutoItem) => ({
+      ...item,
+      id: item.Produto,
     }));
   }, []);
 
@@ -122,6 +138,26 @@ const DetailReceivement: React.FC = () => {
     history.push('/Receivement');
   }, [history]);
 
+  const handleProduction = useCallback(
+    caixa => {
+      // console.log(caixa);
+      setProductDetail(caixa);
+
+      // const listProductDetail = detailReceivement.filter()
+
+      const listProductDetail = detailReceivement.filter(
+        item => item.Caixa === caixa
+      );
+
+      const modifiedDetailReceimentList = transformDetailReceivementProduct(
+        listProductDetail[0].DetalheProduto
+      );
+
+      setDetailReceivementProduct([...modifiedDetailReceimentList]);
+    },
+    [detailReceivement, productDetail]
+  );
+
   return (
     <PageListStyle>
       <Breadcrumb
@@ -130,6 +166,14 @@ const DetailReceivement: React.FC = () => {
       >
         {`Administração > Detalhe`}
       </Breadcrumb>
+
+      {!!productDetail && (
+        <PopUpWindowProduct
+          title="Detalhe de Produto"
+          receivementProduct={detailReceivementProduct}
+          handleCancel={() => setProductDetail(NaN)}
+        />
+      )}
 
       <div className="block">
         <div className="container">
@@ -180,9 +224,26 @@ const DetailReceivement: React.FC = () => {
                         title: 'Caixa',
                         orderable: true,
                         type: 'string',
-                        props: ['Caixa'],
                         cssProps: {
-                          width: '15%',
+                          width: '20%',
+                        },
+                        props: ['Caixa'],
+                        renderItem: row => {
+                          return (
+                            <div className="row-actions-button">
+                              <p>{row.Caixa}</p>
+                              <button
+                                type="button"
+                                className="action"
+                                onClick={row1 => {
+                                  handleProduction(row.Caixa);
+                                }}
+                              >
+                                <img src={SearchIcon} alt="" />
+                                <p className="hover-item">Detalhe</p>
+                              </button>
+                            </div>
+                          );
                         },
                       },
                       {
@@ -197,7 +258,7 @@ const DetailReceivement: React.FC = () => {
                       {
                         title: 'Coleta',
                         orderable: true,
-                        type: 'date',
+                        type: 'datetime',
                         props: ['DataColeta'],
                         cssProps: {
                           width: '15%',
@@ -207,6 +268,7 @@ const DetailReceivement: React.FC = () => {
                         title: 'Usuário',
                         orderable: true,
                         type: 'string',
+                        trunc: 10,
                         props: ['Usuario'],
                         cssProps: {
                           width: '15%',

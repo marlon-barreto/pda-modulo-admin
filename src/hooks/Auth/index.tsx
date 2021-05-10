@@ -50,10 +50,13 @@ const AuthProvider: React.FC = ({ children }) => {
           login: response.data.login,
           email: response.data.email,
           active: response.data.active,
+          profile: response.data.profile.code,
         };
 
         localStorage.setItem('@pdamodules::token', 'a');
         localStorage.setItem('@pdamodules::user', JSON.stringify(userToStore));
+        localStorage.setItem('@pdamodules::module', module);
+        localStorage.setItem('@pdamodules::profile', userToStore.profile);
 
         setData({
           token: 'a',
@@ -70,6 +73,8 @@ const AuthProvider: React.FC = ({ children }) => {
   const signOut = useCallback(() => {
     localStorage.removeItem('@pdamodules::token');
     localStorage.removeItem('@pdamodules::user');
+    localStorage.removeItem('@pdamodules::module');
+    localStorage.removeItem('@pdamodules::profile');
 
     setData({} as AuthState);
   }, []);

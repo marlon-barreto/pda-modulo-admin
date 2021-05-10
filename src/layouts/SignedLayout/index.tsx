@@ -33,6 +33,7 @@ interface PagesProps {
 interface PagesRequest {
   data: {
     systemList: {
+      code: number;
       systemMenuList: PagesProps[];
     }[];
   }[];
@@ -84,12 +85,21 @@ const SignedLayout: React.FC = ({ children }) => {
         code: 43,
       });
 
-      const allPages = response.data[0].systemList[0].systemMenuList;
+      // Codigo fixo
+      // const allPages = response.data[0].systemList[0].systemMenuList;
+
+      const listSystemList = response.data[0].systemList;
+      // filtrar codigo do modulo 42 ou 1
+      // http://localhost:3001/?p_param=1080|42
+
+      const listProductDetail = listSystemList.filter(item => item.code === 1);
+      const allPages = listProductDetail[0].systemMenuList;
 
       const normalPages = allPages.filter(
         (item: PagesProps) => !item.fatherCode
       );
 
+      // Aqui precisa filtar o filhos pelo fatherCode. O pai seria todos que não tem fatherCode.
       const childrenPages = normalPages.map((_: PagesProps, index: number) => {
         return allPages
           .filter((allItem: PagesProps) => allItem.fatherCode === index + 1)

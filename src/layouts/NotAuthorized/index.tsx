@@ -1,19 +1,13 @@
 import React from 'react';
+import { Container } from './styles';
 
-const NotFoundPage: React.FC = () => {
+const NotAuthorized: React.FC = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      Não autorizado
-    </div>
+    <Container>
+      <h1>505</h1>
+      <p>Não autorizado</p>
+    </Container>
   );
 };
 
-export default NotFoundPage;
+export default NotAuthorized;
