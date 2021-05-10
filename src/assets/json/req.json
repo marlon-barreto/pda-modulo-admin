@@ -1,0 +1,4851 @@
+[
+  {
+    "description": "HOMOLOGAÇÃO",
+    "leader": true,
+    "user": {
+      "profile": {
+        "system": {
+          "systemMenu": {
+            "systemCode": 0,
+            "systemMenuProfileList": []
+          },
+          "systemMenuList": []
+        },
+        "systemList": [],
+        "systemOutList": []
+      },
+      "subsidiary": {},
+      "subsidiaryList": [],
+      "profileList": []
+    },
+    "system": {
+      "systemMenu": {
+        "systemCode": 0,
+        "systemMenuProfileList": []
+      },
+      "systemMenuList": []
+    },
+    "userList": [],
+    "systemList": [
+      {
+        "description": "Administração",
+        "initials": "ADM",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 1,
+            "name": "Administração",
+            "page": "http://179.184.159.52:6102",
+            "order": 1,
+            "orderSystem": 1,
+            "icon": "users-cog",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 1,
+                "systemProfileCode": 713,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 1
+          },
+          {
+            "systemCode": 1,
+            "name": "Perfil",
+            "page": "Profile",
+            "fatherCode": 1,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 2,
+                "systemProfileCode": 713,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 2
+          },
+          {
+            "systemCode": 1,
+            "name": "Usuário",
+            "page": "User",
+            "fatherCode": 1,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 3,
+                "systemProfileCode": 713,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 3
+          },
+          {
+            "systemCode": 1,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 293,
+                "systemProfileCode": 713,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 293
+          }
+        ],
+        "code": 1
+      },
+      {
+        "description": "Agendamento",
+        "initials": "SKU",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 41,
+            "name": "Relatório de Entregas",
+            "page": "RelAgendaEntrega",
+            "fatherCode": 245,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 121,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 121
+          },
+          {
+            "systemCode": 41,
+            "name": "Relatório de Divergência",
+            "page": "RelDivergencia",
+            "fatherCode": 245,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 124,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 124
+          },
+          {
+            "systemCode": 41,
+            "name": "Pedidos sem Alocação",
+            "page": "PedidoSemAlocacao",
+            "fatherCode": 245,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 165,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 165
+          },
+          {
+            "systemCode": 41,
+            "name": "Pedidos sem Alocação Compras",
+            "page": "PedidosSemAlocacaoCompras",
+            "fatherCode": 245,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 167,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 167
+          },
+          {
+            "systemCode": 41,
+            "name": "Relatório de Divergência Fiscal",
+            "page": "AgendamentoDivergenciaFiscal.aspx",
+            "fatherCode": 245,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 233,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 233
+          },
+          {
+            "systemCode": 41,
+            "name": "Administração",
+            "order": 0,
+            "icon": "users-cog",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 242,
+                "systemProfileCode": 714,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 242
+          },
+          {
+            "systemCode": 41,
+            "name": "Agenda",
+            "page": "http://179.184.159.52:6210",
+            "order": 1,
+            "orderSystem": 2,
+            "icon": "calendar-alt",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 243,
+                "systemProfileCode": 714,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 243
+          },
+          {
+            "systemCode": 41,
+            "name": "Manutenção",
+            "order": 2,
+            "icon": "tools",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 244,
+                "systemProfileCode": 714,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 244
+          },
+          {
+            "systemCode": 41,
+            "name": "Relatórios",
+            "order": 3,
+            "icon": "table",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 245,
+                "systemProfileCode": 714,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 245
+          },
+          {
+            "systemCode": 41,
+            "name": "Dashboard",
+            "page": "Dashboard",
+            "fatherCode": 243,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 246,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 246
+          },
+          {
+            "systemCode": 41,
+            "name": "Pedidos em Carteira",
+            "page": "PedidoCarteira",
+            "fatherCode": 243,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 247,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 247
+          },
+          {
+            "systemCode": 41,
+            "name": "Enviar Amostra",
+            "page": "EnviarAmostra.aspx",
+            "fatherCode": 243,
+            "order": 102,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 248,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 248
+          },
+          {
+            "systemCode": 41,
+            "name": "XML",
+            "page": "PedidoXML",
+            "fatherCode": 243,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 249,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 249
+          },
+          {
+            "systemCode": 41,
+            "name": "XML Divergente",
+            "page": "XMLDivergente",
+            "fatherCode": 243,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 250,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 250
+          },
+          {
+            "systemCode": 41,
+            "name": "Portaria",
+            "page": "Portaria",
+            "fatherCode": 243,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 251,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 251
+          },
+          {
+            "systemCode": 41,
+            "name": "Produto Divergente",
+            "page": "PedidoStatus.aspx?pStatus=10",
+            "fatherCode": 243,
+            "order": 107,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 252,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 252
+          },
+          {
+            "systemCode": 41,
+            "name": "Saída Portaria",
+            "page": "SaidaPortaria",
+            "fatherCode": 243,
+            "order": 107,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 253,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 253
+          },
+          {
+            "systemCode": 41,
+            "name": "PAF",
+            "page": "PAF",
+            "fatherCode": 243,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 254,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 254
+          },
+          {
+            "systemCode": 41,
+            "name": "PAF Divergente",
+            "page": "PAFDivergente",
+            "fatherCode": 243,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 255,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 255
+          },
+          {
+            "systemCode": 41,
+            "name": "Impressão Etiqueta",
+            "page": "PedidoFinalizado",
+            "fatherCode": 243,
+            "order": 109,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 256,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 256
+          },
+          {
+            "systemCode": 41,
+            "name": "Agendamento Exceção",
+            "page": "AgendaExcecao",
+            "fatherCode": 243,
+            "order": 120,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 258,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 258
+          },
+          {
+            "systemCode": 41,
+            "name": "Parametrização",
+            "page": "Parametro",
+            "fatherCode": 242,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 260,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 260
+          },
+          {
+            "systemCode": 41,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 297,
+                "systemProfileCode": 714,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 297
+          },
+          {
+            "systemCode": 41,
+            "name": "Relatorio de N.R.R",
+            "page": "AgendamentoEntregasLog",
+            "fatherCode": 245,
+            "order": 9,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 300,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 300
+          },
+          {
+            "systemCode": 41,
+            "name": "Retornar",
+            "page": "Movimentacao",
+            "fatherCode": 244,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 301,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 301
+          },
+          {
+            "systemCode": 41,
+            "name": "Pedido Recebido",
+            "page": "AgendaEntregaValor",
+            "fatherCode": 245,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 321,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 321
+          },
+          {
+            "systemCode": 41,
+            "name": "Manuais",
+            "page": "RecuperaArquivo",
+            "fatherCode": 244,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 324,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 324
+          },
+          {
+            "systemCode": 41,
+            "name": "Assinaturas",
+            "page": "RelAssinaturasFornecedores",
+            "fatherCode": 244,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 325,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 325
+          },
+          {
+            "systemCode": 41,
+            "name": "Upload Manuais",
+            "page": "UploadArquivo",
+            "fatherCode": 244,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 326,
+                "systemProfileCode": 714,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 326
+          }
+        ],
+        "code": 41
+      },
+      {
+        "description": "WMS",
+        "initials": "WMS",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 42,
+            "name": "Relatórios",
+            "order": 9,
+            "icon": "table",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 109,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 109
+          },
+          {
+            "systemCode": 42,
+            "name": "Status do Produto",
+            "page": "RelatorioStatusProduto",
+            "fatherCode": 109,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 126,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 126
+          },
+          {
+            "systemCode": 42,
+            "name": "Status do Produto (R$)",
+            "page": "StatusProdutoValorizado",
+            "fatherCode": 109,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 148,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 148
+          },
+          {
+            "systemCode": 42,
+            "name": "Financeiro",
+            "page": "AcompanhamentoFinanceiro",
+            "fatherCode": 109,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 164,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 164
+          },
+          {
+            "systemCode": 42,
+            "name": "WMS",
+            "page": "http://179.184.159.52:6211",
+            "order": 0,
+            "orderSystem": 6,
+            "icon": "cubes",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 262,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 262
+          },
+          {
+            "systemCode": 42,
+            "name": "Qualidade",
+            "order": 2,
+            "icon": "eraser",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 263,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 263
+          },
+          {
+            "systemCode": 42,
+            "name": "Perguntas",
+            "page": "CQ_Perguntas",
+            "fatherCode": 263,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 264,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 264
+          },
+          {
+            "systemCode": 42,
+            "name": "Checklist",
+            "page": "CQ_Checklist",
+            "fatherCode": 263,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 265,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 265
+          },
+          {
+            "systemCode": 42,
+            "name": "Coletas",
+            "page": "CQ_Coletas",
+            "fatherCode": 263,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 266,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 266
+          },
+          {
+            "systemCode": 42,
+            "name": "Relatório",
+            "page": "CQ_ChecklistResumoReport",
+            "fatherCode": 263,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 267,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 267
+          },
+          {
+            "systemCode": 42,
+            "name": "Conferência",
+            "order": 3,
+            "icon": "tasks",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 268,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 268
+          },
+          {
+            "systemCode": 42,
+            "name": "Coletas",
+            "page": "CF_Coletas",
+            "fatherCode": 268,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 269,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 269
+          },
+          {
+            "systemCode": 42,
+            "name": "Liberar divergência",
+            "page": "LiberacaoCrossDocking",
+            "fatherCode": 268,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 270,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 270
+          },
+          {
+            "systemCode": 42,
+            "name": "Finalizar Pedido",
+            "page": "CF_FechamentoPedido",
+            "fatherCode": 268,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 271,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 271
+          },
+          {
+            "systemCode": 42,
+            "name": "Ajustar Caixas",
+            "page": "ManutencaoCaixa",
+            "fatherCode": 268,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 272,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 272
+          },
+          {
+            "systemCode": 42,
+            "name": "Extrato do Produto",
+            "page": "CF_ExtratoProduto",
+            "fatherCode": 268,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 273,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 273
+          },
+          {
+            "systemCode": 42,
+            "name": "Dashboard",
+            "page": "Dashboard",
+            "fatherCode": 262,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 274,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 274
+          },
+          {
+            "systemCode": 42,
+            "name": "Estoque",
+            "order": 4,
+            "icon": "download",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 275,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 275
+          },
+          {
+            "systemCode": 42,
+            "name": "Criar Transferência",
+            "page": "EXP_GerarTransferenciaBoxTorra",
+            "fatherCode": 275,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 276,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 276
+          },
+          {
+            "systemCode": 42,
+            "name": "Consultar Transferência",
+            "page": "EXP_ConsultaTransferenciaBoxTorra",
+            "fatherCode": 275,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 277,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 277
+          },
+          {
+            "systemCode": 42,
+            "name": "Box (Lojas)",
+            "page": "uxWmsEstoque",
+            "fatherCode": 275,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 278,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 278
+          },
+          {
+            "systemCode": 42,
+            "name": "Armazenagem",
+            "page": "Armazenagem",
+            "fatherCode": 275,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 279,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 279
+          },
+          {
+            "systemCode": 42,
+            "name": "Endereçamento",
+            "page": "uxWmsEnderecamento",
+            "fatherCode": 275,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 280,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 280
+          },
+          {
+            "systemCode": 42,
+            "name": "Acompanhamento Requisições",
+            "page": "AcompanhamentoRequisicoes",
+            "fatherCode": 275,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 281,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 281
+          },
+          {
+            "systemCode": 42,
+            "name": "Kardex",
+            "page": "RelatorioKardex",
+            "fatherCode": 275,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 282,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 282
+          },
+          {
+            "systemCode": 42,
+            "name": "Criar Transferência (Arquivo)",
+            "page": "GerarTransferenciaPorArquivo",
+            "fatherCode": 275,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 283,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 283
+          },
+          {
+            "systemCode": 42,
+            "name": "Expedição",
+            "order": 7,
+            "icon": "upload",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 284,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 284
+          },
+          {
+            "systemCode": 42,
+            "name": "Finalizar Expedição",
+            "page": "EXP_FinalizarExpedicao",
+            "fatherCode": 284,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 286,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 286
+          },
+          {
+            "systemCode": 42,
+            "name": "Relatório de Expedição",
+            "page": "EXP_RelExpedicaoDetalhado",
+            "fatherCode": 284,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 287,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 287
+          },
+          {
+            "systemCode": 42,
+            "name": "Recebimento",
+            "order": 1,
+            "icon": "shipping-fast",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 288,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 288
+          },
+          {
+            "systemCode": 42,
+            "name": "Relatório",
+            "page": "Recebimento",
+            "fatherCode": 288,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 290,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 290
+          },
+          {
+            "systemCode": 42,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 299,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 299
+          },
+          {
+            "systemCode": 42,
+            "name": "Criar Transferência Pack (Arquivo)",
+            "page": "GerarTransferenciaPorArquivoPack",
+            "fatherCode": 275,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 302,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 302
+          },
+          {
+            "systemCode": 42,
+            "name": "Devolução",
+            "order": 5,
+            "icon": "reply-all",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 303,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 303
+          },
+          {
+            "systemCode": 42,
+            "name": "Emitir",
+            "page": "Devolucao",
+            "fatherCode": 303,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 304,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 304
+          },
+          {
+            "systemCode": 42,
+            "name": "Transferência",
+            "order": 6,
+            "icon": "sync-alt",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 305,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 305
+          },
+          {
+            "systemCode": 42,
+            "name": "Consultar",
+            "page": "TRF_ColetaLojaLoja",
+            "fatherCode": 305,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 306,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 306
+          },
+          {
+            "systemCode": 42,
+            "name": "Manutenção",
+            "order": 8,
+            "icon": "cogs",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 307,
+                "systemProfileCode": 715,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 307
+          },
+          {
+            "systemCode": 42,
+            "name": "Manuseio",
+            "page": "Manuseio",
+            "fatherCode": 307,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 308,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 308
+          },
+          {
+            "systemCode": 42,
+            "name": "Retornar fase",
+            "page": "RetornarFase",
+            "fatherCode": 307,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 309,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 309
+          },
+          {
+            "systemCode": 42,
+            "name": "Manuseio de Produtos",
+            "page": "ManuseioProduto",
+            "fatherCode": 307,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 310,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 310
+          },
+          {
+            "systemCode": 42,
+            "name": "Cadastro de Rotas",
+            "page": "RotasUpload",
+            "fatherCode": 307,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 311,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 311
+          },
+          {
+            "systemCode": 42,
+            "name": "Histórico de fases",
+            "page": "HistoricoFases",
+            "fatherCode": 109,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 312,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 312
+          },
+          {
+            "systemCode": 42,
+            "name": "Log Recebimento",
+            "page": "HistoricoRecebimento",
+            "fatherCode": 109,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 313,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 313
+          },
+          {
+            "systemCode": 42,
+            "name": "Tempo Recebimento",
+            "page": "TempoRecebimento",
+            "fatherCode": 109,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 314,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 314
+          },
+          {
+            "systemCode": 42,
+            "name": "Estoque Box Compras",
+            "page": "RelatorioBoxCompras",
+            "fatherCode": 109,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 315,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 315
+          },
+          {
+            "systemCode": 42,
+            "name": "Estoque Box Consolidado",
+            "page": "RelatorioBoxConsolidado",
+            "fatherCode": 109,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 316,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 316
+          },
+          {
+            "systemCode": 42,
+            "name": "Transf. Loja Loja Compras",
+            "page": "RelComprasLojaLoja",
+            "fatherCode": 109,
+            "order": 9,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 317,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 317
+          },
+          {
+            "systemCode": 42,
+            "name": "Reservados",
+            "page": "Reservados",
+            "fatherCode": 109,
+            "order": 11,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 318,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 318
+          },
+          {
+            "systemCode": 42,
+            "name": "Reservados Destino",
+            "page": "ArmazenagemProdutosReservados",
+            "fatherCode": 109,
+            "order": 13,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 319,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 319
+          },
+          {
+            "systemCode": 42,
+            "name": "Histórico de Fases (Extração)",
+            "page": "HistoricoFaseExtracao",
+            "fatherCode": 109,
+            "order": 14,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 320,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 320
+          },
+          {
+            "systemCode": 42,
+            "name": "Log Ações CQ",
+            "page": "RelAcoesCQ",
+            "fatherCode": 109,
+            "order": 10,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 322,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 322
+          },
+          {
+            "systemCode": 42,
+            "name": "Log Desvios de Box",
+            "page": "LogDesvio",
+            "fatherCode": 109,
+            "order": 12,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 323,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 323
+          },
+          {
+            "systemCode": 42,
+            "name": "Transit-Point",
+            "page": "RecebimentoTransit",
+            "fatherCode": 288,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 329,
+                "systemProfileCode": 715,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 329
+          }
+        ],
+        "code": 42
+      },
+      {
+        "description": "Recebimento C.D  (M)",
+        "initials": "RecebimentoCD",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 22
+      },
+      {
+        "description": "Conferência  (M)",
+        "initials": "Conferencia",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 23
+      },
+      {
+        "description": "Qualidade  (M)",
+        "initials": "Qualidade",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 24
+      },
+      {
+        "description": "Expedição  (M)",
+        "initials": "Expedicao",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 25
+      },
+      {
+        "description": "Picking  (M)",
+        "initials": "Picking",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 29
+      },
+      {
+        "description": "Armazenagem  (M)",
+        "initials": "Armazenagem",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 35
+      },
+      {
+        "description": "Amostras",
+        "initials": "Amostras",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 27,
+            "name": "Amostras",
+            "page": "http://179.184.159.52:6012/Views/AmostraUX/Initial.aspx",
+            "order": 0,
+            "orderSystem": 3,
+            "icon": "tag",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 512,
+                "systemProfileCode": 924,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 512
+          },
+          {
+            "systemCode": 27,
+            "name": "Consultar Amostra",
+            "page": "ConsultaAmostra.aspx",
+            "fatherCode": 512,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 513,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 513
+          },
+          {
+            "systemCode": 27,
+            "name": "Enviar Amostra CD",
+            "page": "AmostraDisponivel.aspx",
+            "fatherCode": 512,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 514,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 514
+          },
+          {
+            "systemCode": 27,
+            "name": "Receber Amostra CD",
+            "page": "ReceberCD.aspx",
+            "fatherCode": 512,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 515,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 515
+          },
+          {
+            "systemCode": 27,
+            "name": "Amostra Pendentes",
+            "page": "AmostraDivergente.aspx",
+            "fatherCode": 512,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 516,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 516
+          },
+          {
+            "systemCode": 27,
+            "name": "Amostra em Compras",
+            "page": "AmostraEmCompras.aspx",
+            "fatherCode": 512,
+            "order": 10,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 517,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 517
+          },
+          {
+            "systemCode": 27,
+            "name": "Endereçar Amostra CD",
+            "page": "Enderecar.aspx",
+            "fatherCode": 512,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 518,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 518
+          },
+          {
+            "systemCode": 27,
+            "name": "Dashboard",
+            "page": "Default.aspx",
+            "fatherCode": 512,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 519,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 519
+          },
+          {
+            "systemCode": 27,
+            "name": "Estoque Amostra CD",
+            "page": "AmostraFinalizada.aspx",
+            "fatherCode": 512,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 520,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 520
+          },
+          {
+            "systemCode": 27,
+            "name": "Enviar Amostra Compras",
+            "page": "EnviarAmostraCompras.aspx",
+            "fatherCode": 512,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 521,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 521
+          },
+          {
+            "systemCode": 27,
+            "name": "Cadastrar Amostra",
+            "page": "CadastroAmostra.aspx",
+            "fatherCode": 512,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 522,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 522
+          },
+          {
+            "systemCode": 27,
+            "name": "Receber Compras",
+            "page": "ReceberCompras.aspx",
+            "fatherCode": 512,
+            "order": 9,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 523,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 523
+          },
+          {
+            "systemCode": 27,
+            "name": "Enviar CQ",
+            "page": "AmostraEmCQ.aspx",
+            "fatherCode": 512,
+            "order": 11,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 524,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 524
+          },
+          {
+            "systemCode": 27,
+            "name": "Devolver CQ",
+            "page": "AmostraCQ.aspx",
+            "fatherCode": 512,
+            "order": 12,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 525,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 525
+          },
+          {
+            "systemCode": 27,
+            "name": "Saída Autorizada",
+            "page": "SaidaAutorizada.aspx",
+            "fatherCode": 512,
+            "order": 13,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 526,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 526
+          },
+          {
+            "systemCode": 27,
+            "name": "Relatórios",
+            "order": 2,
+            "icon": "table",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 527,
+                "systemProfileCode": 924,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 527
+          },
+          {
+            "systemCode": 27,
+            "name": "Amostra Pedido",
+            "page": "pedidoamostra.aspx",
+            "fatherCode": 527,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 528,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 528
+          },
+          {
+            "systemCode": 27,
+            "name": "Histórico Saída",
+            "page": "AmostraHistoricoSaida.aspx",
+            "fatherCode": 527,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 529,
+                "systemProfileCode": 924,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 529
+          },
+          {
+            "systemCode": 27,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 580,
+                "systemProfileCode": 924,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 580
+          }
+        ],
+        "code": 27
+      },
+      {
+        "description": "Recebimento",
+        "initials": "Recebimento",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 19,
+            "name": "Recebimento Loja",
+            "page": "http://179.184.159.52:6014/Views/AuditoriaUX/Initial.aspx",
+            "orderSystem": 2,
+            "icon": "truck",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 499,
+                "systemProfileCode": 927,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 499
+          },
+          {
+            "systemCode": 19,
+            "name": "Recebimento",
+            "page": "RomaneioCaixa.aspx",
+            "fatherCode": 499,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 500,
+                "systemProfileCode": 927,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 500
+          },
+          {
+            "systemCode": 19,
+            "name": "Detalhe Romaneio",
+            "page": "RomaneioCaixaDetalhe.aspx",
+            "fatherCode": 499,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 501,
+                "systemProfileCode": 927,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 501
+          },
+          {
+            "systemCode": 19,
+            "name": "Rel. Recebimento Loja",
+            "page": "GestaoRecebimento.aspx",
+            "fatherCode": 499,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 502,
+                "systemProfileCode": 927,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 502
+          },
+          {
+            "systemCode": 19,
+            "name": "Cad. Motivo Ocorrência",
+            "page": "MotivoRecebimento.aspx",
+            "fatherCode": 499,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 503,
+                "systemProfileCode": 927,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 503
+          },
+          {
+            "systemCode": 19,
+            "name": "Rel. Recebimento Loja Analítico",
+            "page": "GestaoAnalitico.aspx",
+            "fatherCode": 499,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 504,
+                "systemProfileCode": 927,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 504
+          },
+          {
+            "systemCode": 19,
+            "name": "Relat. Ocorrências",
+            "page": "RelatorioOcorrenciasRecebimento.aspx",
+            "fatherCode": 499,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 505,
+                "systemProfileCode": 927,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 505
+          },
+          {
+            "systemCode": 19,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 583,
+                "systemProfileCode": 927,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 583
+          }
+        ],
+        "code": 19
+      },
+      {
+        "description": "Auditoria",
+        "initials": "AU",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 14,
+            "name": "Auditoria Loja",
+            "page": "http://179.184.159.52:6014/Views/AuditoriaUX/Initial.aspx",
+            "orderSystem": 4,
+            "icon": "check",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 495,
+                "systemProfileCode": 928,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 495
+          },
+          {
+            "systemCode": 14,
+            "name": "Reposição",
+            "page": "Reposicao.aspx",
+            "fatherCode": 495,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 496,
+                "systemProfileCode": 928,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 496
+          },
+          {
+            "systemCode": 14,
+            "name": "Estoque Box",
+            "page": "EstoqueBox.aspx",
+            "fatherCode": 495,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 497,
+                "systemProfileCode": 928,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 497
+          },
+          {
+            "systemCode": 14,
+            "name": "Parametrização",
+            "page": "Parametros.aspx",
+            "fatherCode": 495,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 498,
+                "systemProfileCode": 928,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 498
+          },
+          {
+            "systemCode": 14,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 582,
+                "systemProfileCode": 928,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 582
+          }
+        ],
+        "code": 14
+      },
+      {
+        "description": "Transporte",
+        "initials": "Transporte",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 26,
+            "name": "Transporte",
+            "page": "http://179.184.159.52:6014/Views/TransporteUX/Initial.aspx",
+            "order": 0,
+            "orderSystem": 11,
+            "icon": "road",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 506,
+                "systemProfileCode": 929,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 506
+          },
+          {
+            "systemCode": 26,
+            "name": "DashBoard",
+            "page": "DashBoardTransporte.aspx",
+            "fatherCode": 506,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 507,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 507
+          },
+          {
+            "systemCode": 26,
+            "name": "Retorno CD",
+            "page": "RetornoExpedicaoCD.aspx",
+            "fatherCode": 506,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 508,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 508
+          },
+          {
+            "systemCode": 26,
+            "name": "Cadastrar Motoristas",
+            "page": "CadastroMotoristas.aspx",
+            "fatherCode": 506,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 509,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 509
+          },
+          {
+            "systemCode": 26,
+            "name": "Relatório de Viagem",
+            "page": "EXP_GerarRelatorioViagem.aspx",
+            "fatherCode": 506,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 510,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 510
+          },
+          {
+            "systemCode": 26,
+            "name": "Cadastrar Veículos",
+            "page": "CadastroVeiculos.aspx",
+            "fatherCode": 506,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 511,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 511
+          },
+          {
+            "systemCode": 26,
+            "name": "Planejamento",
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 569,
+                "systemProfileCode": 929,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 569
+          },
+          {
+            "systemCode": 26,
+            "name": "Planejar Expedição",
+            "page": "PlanejamentoExpedicao.aspx",
+            "fatherCode": 569,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 570,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 570
+          },
+          {
+            "systemCode": 26,
+            "name": "Rotas",
+            "page": "RotasUpload.aspx",
+            "fatherCode": 569,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 571,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 571
+          },
+          {
+            "systemCode": 26,
+            "name": "Preenchimento Manual",
+            "page": "PreenchimentoManualDashBoard.aspx",
+            "fatherCode": 569,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 572,
+                "systemProfileCode": 929,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 572
+          },
+          {
+            "systemCode": 26,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 584,
+                "systemProfileCode": 929,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 584
+          }
+        ],
+        "code": 26
+      },
+      {
+        "description": "Transferência",
+        "initials": "Transf",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 32,
+            "name": "Transferência Lojas",
+            "page": "http://179.184.159.52:6014/Views/AuditoriaUX/Initial.aspx",
+            "orderSystem": 12,
+            "icon": "upload",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 530,
+                "systemProfileCode": 930,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 530
+          },
+          {
+            "systemCode": 32,
+            "name": "Requisição",
+            "page": "Transferencia.aspx",
+            "fatherCode": 530,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 531,
+                "systemProfileCode": 930,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 531
+          },
+          {
+            "systemCode": 32,
+            "name": "Consultar",
+            "page": "Consultar.aspx",
+            "fatherCode": 530,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 532,
+                "systemProfileCode": 930,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 532
+          },
+          {
+            "systemCode": 32,
+            "name": "Aprovação",
+            "page": "Aprovacao.aspx",
+            "fatherCode": 530,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 533,
+                "systemProfileCode": 930,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 533
+          },
+          {
+            "systemCode": 32,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 585,
+                "systemProfileCode": 930,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 585
+          }
+        ],
+        "code": 32
+      },
+      {
+        "description": "Cabides",
+        "initials": "Cabides",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 36,
+            "name": "Cabides",
+            "page": "http://179.184.159.52:6014/Views/CabidesUX/Initial.aspx",
+            "orderSystem": 15,
+            "icon": "tag",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 553,
+                "systemProfileCode": 933,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 553
+          },
+          {
+            "systemCode": 36,
+            "name": "DISPONÍVEL",
+            "page": "CabideStatus.ASPX?pStatus=0",
+            "fatherCode": 553,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 554,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 554
+          },
+          {
+            "systemCode": 36,
+            "name": "ATENDIDO",
+            "page": "CabideStatus.ASPX?pStatus=3",
+            "fatherCode": 553,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 555,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 555
+          },
+          {
+            "systemCode": 36,
+            "name": "SOLICITADO",
+            "page": "CabideStatus.ASPX?pStatus=1",
+            "fatherCode": 553,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 556,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 556
+          },
+          {
+            "systemCode": 36,
+            "name": "EM SEPARAÇÃO",
+            "page": "CabideStatus.ASPX?pStatus=2",
+            "fatherCode": 553,
+            "order": 3,
+            "icon": "cart",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 557,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 557
+          },
+          {
+            "systemCode": 36,
+            "name": "ESTOQUE FORN.",
+            "page": "CabideStatus.ASPX?pStatus=5",
+            "fatherCode": 553,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 558,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 558
+          },
+          {
+            "systemCode": 36,
+            "name": "SEPARADO",
+            "page": "CabideStatus.ASPX?pStatus=4",
+            "fatherCode": 553,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 559,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 559
+          },
+          {
+            "systemCode": 36,
+            "name": "DashBoard",
+            "page": "Default.aspx",
+            "fatherCode": 553,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 560,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 560
+          },
+          {
+            "systemCode": 36,
+            "name": "Relatórios",
+            "order": 0,
+            "icon": "bar-chart-o",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 561,
+                "systemProfileCode": 933,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 561
+          },
+          {
+            "systemCode": 36,
+            "name": "Kardex",
+            "page": "Kardex.aspx",
+            "fatherCode": 561,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 562,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 562
+          },
+          {
+            "systemCode": 36,
+            "name": "Devolução",
+            "icon": "reply",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 563,
+                "systemProfileCode": 933,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 563
+          },
+          {
+            "systemCode": 36,
+            "name": "Devolver Cabides",
+            "page": "Transferencia.aspx",
+            "fatherCode": 563,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 564,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 564
+          },
+          {
+            "systemCode": 36,
+            "name": "Baixa/Sacolas/Materiais",
+            "page": "TransferenciaOutros.aspx",
+            "fatherCode": 563,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 565,
+                "systemProfileCode": 933,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 565
+          },
+          {
+            "systemCode": 36,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 587,
+                "systemProfileCode": 933,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 587
+          }
+        ],
+        "code": 36
+      },
+      {
+        "description": "Adiantamento",
+        "initials": "Financeiro",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 38,
+            "name": "Solicitar Adiantamento",
+            "page": "http://179.184.159.52:6014/Views/FinanceiroUX/Initial.aspx",
+            "orderSystem": 16,
+            "icon": "credit-card",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 546,
+                "systemProfileCode": 934,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 546
+          },
+          {
+            "systemCode": 38,
+            "name": "Reajustar",
+            "page": "Reajustar.aspx",
+            "fatherCode": 546,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 547,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 547
+          },
+          {
+            "systemCode": 38,
+            "name": "Dashboard",
+            "page": "Default.aspx",
+            "fatherCode": 546,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 548,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 548
+          },
+          {
+            "systemCode": 38,
+            "name": "Solicitar",
+            "page": "Solicitar.ASPX",
+            "fatherCode": 546,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 549,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 549
+          },
+          {
+            "systemCode": 38,
+            "name": "Aprovar",
+            "page": "Aprovar.aspx",
+            "fatherCode": 546,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 550,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 550
+          },
+          {
+            "systemCode": 38,
+            "name": "Reprovado",
+            "page": "Reprovado.aspx",
+            "fatherCode": 546,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 551,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 551
+          },
+          {
+            "systemCode": 38,
+            "name": "Confirmado",
+            "page": "Confirmado.aspx",
+            "fatherCode": 546,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 552,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 552
+          },
+          {
+            "systemCode": 38,
+            "name": "Parametrizar",
+            "order": -1,
+            "icon": "gear",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 573,
+                "systemProfileCode": 934,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 573
+          },
+          {
+            "systemCode": 38,
+            "name": "Parametrizar",
+            "page": "ParametroGenerico.aspx",
+            "fatherCode": 573,
+            "order": 10,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 574,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 574
+          },
+          {
+            "systemCode": 38,
+            "name": "Dados Cadastrais",
+            "order": -2,
+            "icon": "pencil-square-o",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 575,
+                "systemProfileCode": 934,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 575
+          },
+          {
+            "systemCode": 38,
+            "name": "Cadastro Fornecedor",
+            "page": "CadastroFornecedor.aspx",
+            "fatherCode": 575,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 576,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 576
+          },
+          {
+            "systemCode": 38,
+            "name": "Manuais",
+            "order": -3,
+            "icon": "book",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 577,
+                "systemProfileCode": 934,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 577
+          },
+          {
+            "systemCode": 38,
+            "name": "Manuais",
+            "page": "RecuperaArquivos.aspx",
+            "fatherCode": 577,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 578,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 578
+          },
+          {
+            "systemCode": 38,
+            "name": "Inserir Manual",
+            "page": "UploadArquivo.aspx",
+            "fatherCode": 577,
+            "order": 9,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 579,
+                "systemProfileCode": 934,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 579
+          },
+          {
+            "systemCode": 38,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 581,
+                "systemProfileCode": 934,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 581
+          }
+        ],
+        "code": 38
+      },
+      {
+        "description": "Produtividade",
+        "initials": "Prod",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 40,
+            "name": "Produtividade",
+            "page": "http://179.184.159.52:6014/Views/ProdutividadeUX/Initial.aspx",
+            "orderSystem": 16,
+            "icon": "user-clock",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 566,
+                "systemProfileCode": 935,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 566
+          },
+          {
+            "systemCode": 40,
+            "name": "Parametros",
+            "page": "Parametros.aspx",
+            "fatherCode": 566,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 567,
+                "systemProfileCode": 935,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 567
+          },
+          {
+            "systemCode": 40,
+            "name": "Relatório de Produtividade",
+            "page": "IndicadoresProd.aspx",
+            "fatherCode": 566,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 568,
+                "systemProfileCode": 935,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 568
+          },
+          {
+            "systemCode": 40,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 588,
+                "systemProfileCode": 935,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 588
+          }
+        ],
+        "code": 40
+      },
+      {
+        "description": "Inventário  (M)",
+        "initials": "Inventario",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 37
+      },
+      {
+        "description": "Inventário",
+        "initials": "INVROT",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 34,
+            "name": "Inventário",
+            "page": "http://179.184.159.52:6014/Views/InventarioUX/Inicial.aspx",
+            "order": 1,
+            "orderSystem": 13,
+            "icon": "barcode",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 534,
+                "systemProfileCode": 945,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 534
+          },
+          {
+            "systemCode": 34,
+            "name": "Rupturas",
+            "page": "RelatorioRuptura.aspx",
+            "fatherCode": 534,
+            "order": 16,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 535,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 535
+          },
+          {
+            "systemCode": 34,
+            "name": "Endereço",
+            "page": "Enderecos.aspx",
+            "fatherCode": 534,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 536,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 536
+          },
+          {
+            "systemCode": 34,
+            "name": "Departamento Setor",
+            "page": "CadastroDepartamentoSetor.aspx",
+            "fatherCode": 534,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 537,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 537
+          },
+          {
+            "systemCode": 34,
+            "name": "Produto",
+            "page": "Produto.aspx",
+            "fatherCode": 534,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 538,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 538
+          },
+          {
+            "systemCode": 34,
+            "name": "Contagem",
+            "page": "InvContagem.aspx",
+            "fatherCode": 534,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 539,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 539
+          },
+          {
+            "systemCode": 34,
+            "name": "Divergência",
+            "page": "Divergencia.aspx",
+            "fatherCode": 534,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 540,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 540
+          },
+          {
+            "systemCode": 34,
+            "name": "Inventário",
+            "page": "Inventario.aspx",
+            "fatherCode": 534,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 541,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 541
+          },
+          {
+            "systemCode": 34,
+            "name": "Finalizar/Cancelar Inventário",
+            "page": "ArquivoFinal.aspx",
+            "fatherCode": 534,
+            "order": 15,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 542,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 542
+          },
+          {
+            "systemCode": 34,
+            "name": "Status de Endereços",
+            "page": "EnderecosPendentes.aspx",
+            "fatherCode": 534,
+            "order": 14,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 543,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 543
+          },
+          {
+            "systemCode": 34,
+            "name": "Administração",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 544,
+                "systemProfileCode": 945,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 544
+          },
+          {
+            "systemCode": 34,
+            "name": "Parametrizar",
+            "page": "ParametrizarInventario.aspx",
+            "fatherCode": 544,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 545,
+                "systemProfileCode": 945,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 545
+          },
+          {
+            "systemCode": 34,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems/",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 586,
+                "systemProfileCode": 945,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 586
+          }
+        ],
+        "code": 34
+      },
+      {
+        "description": "Amostra  (M)",
+        "initials": "Amostra",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 31
+      },
+      {
+        "description": "Auditoria  (M)",
+        "initials": "AuditoriaPreco",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 17
+      },
+      {
+        "description": "Baixa de Sacolas  (M)",
+        "initials": "BaixaMateriais",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 39
+      },
+      {
+        "description": "Caminhão  (M)",
+        "initials": "Recebimento",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 18
+      },
+      {
+        "description": "Transferência Loja  (M)",
+        "initials": "TransferenciaLojaLoja",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 33
+      },
+      {
+        "description": "Transferência entre Lojas  (M)",
+        "initials": "LojaLoja",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 28
+      },
+      {
+        "description": "Transit-Point (M)",
+        "initials": "TransitPoint",
+        "type": "M",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [],
+        "code": 43
+      },
+      {
+        "description": "CD Itajaí",
+        "initials": "CD_SP",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 44,
+            "name": "Acesso ao CD Itajaí",
+            "page": "http://179.184.159.52:6100/Modules",
+            "order": 2,
+            "orderSystem": 4,
+            "icon": "cubes",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 344,
+                "systemProfileCode": 961,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 344
+          }
+        ],
+        "code": 44
+      },
+      {
+        "description": "CD São Paulo",
+        "initials": "CD_IT",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 45,
+            "name": "Acesso ao CD Osasco",
+            "page": "http://179.184.159.52:6100/Modules",
+            "order": 3,
+            "orderSystem": 3,
+            "icon": "cubes",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 345,
+                "systemProfileCode": 962,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 345
+          }
+        ],
+        "code": 45
+      },
+      {
+        "description": "Gerencial",
+        "initials": "GER",
+        "type": "A",
+        "systemMenu": {
+          "systemCode": 0,
+          "systemMenuProfileList": []
+        },
+        "systemMenuList": [
+          {
+            "systemCode": 46,
+            "name": "WMS",
+            "page": "http://179.184.159.52:6120",
+            "order": 0,
+            "orderSystem": 99,
+            "icon": "cubes",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 347,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 347
+          },
+          {
+            "systemCode": 46,
+            "name": "Recebimento",
+            "order": 1,
+            "icon": "shipping-fast",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 348,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 348
+          },
+          {
+            "systemCode": 46,
+            "name": "Qualidade",
+            "order": 2,
+            "icon": "eraser",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 349,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 349
+          },
+          {
+            "systemCode": 46,
+            "name": "Conferência",
+            "order": 3,
+            "icon": "tasks",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 350,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 350
+          },
+          {
+            "systemCode": 46,
+            "name": "Estoque",
+            "order": 4,
+            "icon": "download",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 351,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 351
+          },
+          {
+            "systemCode": 46,
+            "name": "Devolução",
+            "order": 5,
+            "icon": "reply-all",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 352,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 352
+          },
+          {
+            "systemCode": 46,
+            "name": "Transferência",
+            "order": 6,
+            "icon": "sync-alt",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 353,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 353
+          },
+          {
+            "systemCode": 46,
+            "name": "Expedição",
+            "order": 7,
+            "icon": "upload",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 354,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 354
+          },
+          {
+            "systemCode": 46,
+            "name": "Manutenção",
+            "order": 8,
+            "icon": "cogs",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 355,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 355
+          },
+          {
+            "systemCode": 46,
+            "name": "Relatórios",
+            "order": 9,
+            "icon": "table",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 356,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 356
+          },
+          {
+            "systemCode": 46,
+            "name": "Sistemas",
+            "page": "http://179.184.159.52:6100/Systems",
+            "order": 999,
+            "icon": "th-large",
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 357,
+                "systemProfileCode": 963,
+                "crud": false,
+                "export": false,
+                "integrate": false,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 357
+          },
+          {
+            "systemCode": 46,
+            "name": "Dashboard",
+            "page": "Dashboard",
+            "fatherCode": 347,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 358,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 358
+          },
+          {
+            "systemCode": 46,
+            "name": "Relatório",
+            "page": "Recebimento",
+            "fatherCode": 348,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 359,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 359
+          },
+          {
+            "systemCode": 46,
+            "name": "Transit-Point",
+            "page": "RecebimentoTransit",
+            "fatherCode": 348,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 360,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 360
+          },
+          {
+            "systemCode": 46,
+            "name": "Coletas",
+            "page": "CQ_Coletas",
+            "fatherCode": 349,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 361,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 361
+          },
+          {
+            "systemCode": 46,
+            "name": "Perguntas",
+            "page": "CQ_Perguntas",
+            "fatherCode": 349,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 362,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 362
+          },
+          {
+            "systemCode": 46,
+            "name": "Checklist",
+            "page": "CQ_Checklist",
+            "fatherCode": 349,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 363,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 363
+          },
+          {
+            "systemCode": 46,
+            "name": "Relatório",
+            "page": "CQ_ChecklistResumoReport",
+            "fatherCode": 349,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 364,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 364
+          },
+          {
+            "systemCode": 46,
+            "name": "Coletas",
+            "page": "CF_Coletas",
+            "fatherCode": 350,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 365,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 365
+          },
+          {
+            "systemCode": 46,
+            "name": "Liberar divergência",
+            "page": "LiberacaoCrossDocking",
+            "fatherCode": 350,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 366,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 366
+          },
+          {
+            "systemCode": 46,
+            "name": "Finalizar Pedido",
+            "page": "CF_FechamentoPedido",
+            "fatherCode": 350,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 367,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 367
+          },
+          {
+            "systemCode": 46,
+            "name": "Ajustar Caixas",
+            "page": "ManutencaoCaixa",
+            "fatherCode": 350,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 368,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 368
+          },
+          {
+            "systemCode": 46,
+            "name": "Extrato do Produto",
+            "page": "CF_ExtratoProduto",
+            "fatherCode": 350,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 369,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 369
+          },
+          {
+            "systemCode": 46,
+            "name": "Criar Transferência",
+            "page": "EXP_GerarTransferenciaBoxTorra",
+            "fatherCode": 351,
+            "order": 0,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 370,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 370
+          },
+          {
+            "systemCode": 46,
+            "name": "Consultar Transferência",
+            "page": "EXP_ConsultaTransferenciaBoxTorra",
+            "fatherCode": 351,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 371,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 371
+          },
+          {
+            "systemCode": 46,
+            "name": "Box (Lojas)",
+            "page": "uxWmsEstoque",
+            "fatherCode": 351,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 372,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 372
+          },
+          {
+            "systemCode": 46,
+            "name": "Armazenagem",
+            "page": "Armazenagem",
+            "fatherCode": 351,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 373,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 373
+          },
+          {
+            "systemCode": 46,
+            "name": "Endereçamento",
+            "page": "uxWmsEnderecamento",
+            "fatherCode": 351,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 374,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 374
+          },
+          {
+            "systemCode": 46,
+            "name": "Acompanhamento Requisições",
+            "page": "AcompanhamentoRequisicoes",
+            "fatherCode": 351,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 375,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 375
+          },
+          {
+            "systemCode": 46,
+            "name": "Kardex",
+            "page": "RelatorioKardex",
+            "fatherCode": 351,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 376,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 376
+          },
+          {
+            "systemCode": 46,
+            "name": "Criar Transferência (Arquivo)",
+            "page": "GerarTransferenciaPorArquivo",
+            "fatherCode": 351,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 377,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 377
+          },
+          {
+            "systemCode": 46,
+            "name": "Criar Transferência Pack (Arquivo)",
+            "page": "GerarTransferenciaPorArquivoPack",
+            "fatherCode": 351,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 378,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 378
+          },
+          {
+            "systemCode": 46,
+            "name": "Emitir",
+            "page": "Devolucao",
+            "fatherCode": 352,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 379,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 379
+          },
+          {
+            "systemCode": 46,
+            "name": "Consultar",
+            "page": "TRF_ColetaLojaLoja",
+            "fatherCode": 353,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 380,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 380
+          },
+          {
+            "systemCode": 46,
+            "name": "Relatório de Expedição",
+            "page": "EXP_RelExpedicaoDetalhado",
+            "fatherCode": 354,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 381,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 381
+          },
+          {
+            "systemCode": 46,
+            "name": "Finalizar Expedição",
+            "page": "EXP_FinalizarExpedicao",
+            "fatherCode": 354,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 382,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 382
+          },
+          {
+            "systemCode": 46,
+            "name": "Manuseio",
+            "page": "Manuseio",
+            "fatherCode": 355,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 383,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 383
+          },
+          {
+            "systemCode": 46,
+            "name": "Retornar fase",
+            "page": "RetornarFase",
+            "fatherCode": 355,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 384,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 384
+          },
+          {
+            "systemCode": 46,
+            "name": "Manuseio de Produtos",
+            "page": "ManuseioProduto",
+            "fatherCode": 355,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 385,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 385
+          },
+          {
+            "systemCode": 46,
+            "name": "Cadastro de Rotas",
+            "page": "RotasUpload",
+            "fatherCode": 355,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 386,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 386
+          },
+          {
+            "systemCode": 46,
+            "name": "Histórico de fases",
+            "page": "HistoricoFases",
+            "fatherCode": 356,
+            "order": 1,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 387,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 387
+          },
+          {
+            "systemCode": 46,
+            "name": "Log Recebimento",
+            "page": "HistoricoRecebimento",
+            "fatherCode": 356,
+            "order": 2,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 388,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 388
+          },
+          {
+            "systemCode": 46,
+            "name": "Status do Produto",
+            "page": "RelatorioStatusProduto",
+            "fatherCode": 356,
+            "order": 3,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 389,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 389
+          },
+          {
+            "systemCode": 46,
+            "name": "Status do Produto (R$)",
+            "page": "StatusProdutoValorizado",
+            "fatherCode": 356,
+            "order": 4,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 390,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 390
+          },
+          {
+            "systemCode": 46,
+            "name": "Tempo Recebimento",
+            "page": "TempoRecebimento",
+            "fatherCode": 356,
+            "order": 5,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 391,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 391
+          },
+          {
+            "systemCode": 46,
+            "name": "Financeiro",
+            "page": "AcompanhamentoFinanceiro",
+            "fatherCode": 356,
+            "order": 6,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 392,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 392
+          },
+          {
+            "systemCode": 46,
+            "name": "Estoque Box Compras",
+            "page": "RelatorioBoxCompras",
+            "fatherCode": 356,
+            "order": 7,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 393,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 393
+          },
+          {
+            "systemCode": 46,
+            "name": "Estoque Box Consolidado",
+            "page": "RelatorioBoxConsolidado",
+            "fatherCode": 356,
+            "order": 8,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 394,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 394
+          },
+          {
+            "systemCode": 46,
+            "name": "Transf. Loja Loja Compras",
+            "page": "RelComprasLojaLoja",
+            "fatherCode": 356,
+            "order": 9,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 395,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 395
+          },
+          {
+            "systemCode": 46,
+            "name": "Log Ações CQ",
+            "page": "RelAcoesCQ",
+            "fatherCode": 356,
+            "order": 10,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 396,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 396
+          },
+          {
+            "systemCode": 46,
+            "name": "Reservados",
+            "page": "Reservados",
+            "fatherCode": 356,
+            "order": 11,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 397,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 397
+          },
+          {
+            "systemCode": 46,
+            "name": "Log Desvios de Box",
+            "page": "LogDesvio",
+            "fatherCode": 356,
+            "order": 12,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 398,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 398
+          },
+          {
+            "systemCode": 46,
+            "name": "Reservados Destino",
+            "page": "ArmazenagemProdutosReservados",
+            "fatherCode": 356,
+            "order": 13,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 399,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 399
+          },
+          {
+            "systemCode": 46,
+            "name": "Histórico de Fases (Extração)",
+            "page": "HistoricoFaseExtracao",
+            "fatherCode": 356,
+            "order": 14,
+            "systemMenuProfileList": [
+              {
+                "systemMenuCode": 400,
+                "systemProfileCode": 963,
+                "crud": true,
+                "export": true,
+                "integrate": true,
+                "list": [],
+                "code": 0
+              }
+            ],
+            "code": 400
+          }
+        ],
+        "code": 46
+      }
+    ],
+    "code": 43,
+    "useIns": 1,
+    "datIns": "2019-08-06T11:50:39.74",
+    "useUpd": 1080,
+    "datUpd": "2020-01-28T11:56:32.75"
+  }
+]
