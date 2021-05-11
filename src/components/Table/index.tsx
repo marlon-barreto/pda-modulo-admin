@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useCallback, useState } from 'react';
 
 import { BiLoaderAlt } from 'react-icons/bi';
@@ -178,13 +179,13 @@ function Table<T extends DefaultRowProps>({
               </tr>
             </thead>
             <tbody>
-              {(hidePagination
+              {(!hidePagination
                 ? rows
                     .sort(dynamicSort(`${sortAscending ? '-' : ''}${sortBy}`))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 : rows.sort(dynamicSort(`${sortAscending ? '-' : ''}${sortBy}`))
               ).map((row, index) => (
-                <tr tabIndex={index} key={Math.random()}>
+                <tr tabIndex={index} key={Date.now() + index + Math.random()}>
                   {selectBox && (
                     <td>
                       <TableSelectBox
@@ -195,7 +196,7 @@ function Table<T extends DefaultRowProps>({
                   )}
                   {columns.map((column, indexColumn) => (
                     <TableCell
-                      key={String(indexColumn)}
+                      key={`${String(indexColumn)}${index}`}
                       column={column}
                       row={row}
                     />
@@ -228,7 +229,7 @@ function Table<T extends DefaultRowProps>({
                         {rowActions
                           ? rowActions.map((action: IRowAction<T>) => (
                               <button
-                                key={Math.random()}
+                                key={`${Math.random() + index}`}
                                 type="button"
                                 onClick={event => action.onClick(row, event)}
                                 className="action"

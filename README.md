@@ -15,7 +15,12 @@ Abrindo no cmd ou terminal escolhido execute o comando:
 
 ### `yarn` ou `npm install`
 
-A aplicação será espelhada na porta `3000`, podendo ser acessada pela url:
+A aplicação será espelhada na porta `3001`, podendo ser acessada pela url:
 
-### `http://localhost:3000/`
+### `http://localhost:3001/`
+
+### `http://localhost:3001/?p_param=1080|1`
+### `http://localhost:3001/?p_param=1080|42`
+
+
 

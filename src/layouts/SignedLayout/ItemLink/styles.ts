@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 interface ContainerProps {
   containerClosed: boolean;
@@ -14,10 +15,14 @@ export const Container = styled.div<ContainerProps>`
     height: 44px;
 
     .container {
-      background: ${props => (props.opened ? ' #1b1b28' : '#1e1e2d')};
+      background: ${props => (props.opened ? '#1b1b28' : '#1e1e2d')};
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      &:hover {
+        background: ${darken(0.05, '#1e1e2d')};
+      }
 
       .left {
         display: flex;

@@ -9,6 +9,7 @@ export interface IColumn<T extends DefaultRowProps> {
   cssProps?: CSSProperties;
   formatter?: (row: IRow<T>) => string;
   orderable?: boolean;
+  id?: PropType;
   props: PropType[];
   filterRef?: React.MutableRefObject<HTMLInputElement | undefined>;
   type?:
@@ -24,7 +25,7 @@ export interface IColumn<T extends DefaultRowProps> {
 }
 
 export interface DefaultRowProps {
-  id: string | number;
+  id?: string | number;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

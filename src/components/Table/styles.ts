@@ -177,6 +177,62 @@ export const Container = styled.div`
             }
           }
 
+          .row-actions-button-detail {
+            display: flex;
+            justify-content: flex-end;
+
+            p {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 21px;
+            }
+
+            .action {
+              width: 32px;
+              height: 32px;
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: transparent;
+              position: relative;
+
+              .hover-item {
+                display: none;
+                position: absolute;
+                bottom: 40px;
+                background: #fff;
+                padding: 8px 16px;
+                border-radius: 4px;
+                box-shadow: 1px 5px 14px 0px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 1px 5px 14px 0px rgba(0, 0, 0, 0.1);
+                -moz-box-shadow: 1px 5px 14px 0px rgba(0, 0, 0, 0.1);
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 19px;
+                color: #1e1e2d;
+              }
+
+              &:hover {
+                transition: 0.5s;
+                background: #f2f2f2;
+
+                .hover-item {
+                  display: block;
+                }
+              }
+
+              & + .action {
+                margin-left: 10px;
+              }
+
+              img {
+                max-width: 50%;
+                border-radius: 8px;
+              }
+            }
+          }
+
           .row-actions-button {
             display: flex;
             align-items: center;

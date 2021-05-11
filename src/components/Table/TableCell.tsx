@@ -39,7 +39,10 @@ function TableCell<T extends DefaultRowProps>({
       }).format(parseInt(rowColumnText.join(' '), 10));
       break;
     case 'string':
-      if (column.trunc) {
+      if (
+        column.trunc &&
+        rowColumnText.join(column.delimiter || ' ').length > column.trunc
+      ) {
         formatRowColumnText = `${rowColumnText
           .join(column.delimiter || ' ')
           .slice(0, column.trunc)}...`;

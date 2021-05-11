@@ -4,19 +4,21 @@ import { useHistory } from 'react-router-dom';
 
 import { useToast } from '../../../hooks/Toast';
 
-import {
-  ButtonLink,
-  Container as PageListStyle,
-} from '../../../styles/PageStyles/List';
+import { Container as PageListStyle } from '../../../styles/PageStyles/List';
 
 import Breadcrumb from '../../../components/Breadcrumb';
 import SearchBoxComponent from '../../../components/SearchBox';
-import PopUpWindow from '../../../components/PopUpWindow';
 import Table from '../../../components/Table';
 import LoadingComponent from '../../../components/LoadingComponent';
 import TitleWithButtons from '../../../components/TitleWithButtons';
 import ProgressBar from '../../../components/ProgressBar';
-import IconProduto from '../../../assets/svg/produto.svg';
+
+import IconCaixaFinalizada from '../../../assets/svg/caixa-verde.svg';
+import IconCaixaAndamento from '../../../assets/svg/caixa-amarela.svg';
+import IconCaixaDivergencia from '../../../assets/svg/caixa-vermelha.svg';
+import IconCaixaPendente from '../../../assets/svg/caixa-branca.svg';
+
+import SearchIcon from '../../../assets/svg/SearchGrid.svg';
 
 import api from '../../../services/api';
 import apiReceivement from '../../../services/receivement';
@@ -78,38 +80,38 @@ const Receivement: React.FC = () => {
     }));
   }, []);
 
-  useEffect(() => {
-    async function getReceiments() {
-      try {
-        setLoading(true);
-        const [receivementResponse, statusItemResponse]: [
-          Request<ReceivementItem>,
-          Request<StatusItem>
-        ] = await Promise.all([
-          apiReceivement.get('receivement'),
-          apiReceivement.get('receivement/status'),
-        ]);
+  const getReceiments = useCallback(async () => {
+    try {
+      setLoading(true);
+      const [receivementResponse, statusItemResponse]: [
+        Request<ReceivementItem>,
+        Request<StatusItem>
+      ] = await Promise.all([
+        apiReceivement.get('receivement'),
+        apiReceivement.get('receivement/status'),
+      ]);
 
-        const modifiedStatusList = transformArrayToSelectOption(
-          statusItemResponse.data
-        );
+      const modifiedStatusList = transformArrayToSelectOption(
+        statusItemResponse.data
+      );
 
-        setStatusList([...modifiedStatusList]);
+      setStatusList([...modifiedStatusList]);
 
-        const modifiedReceimentList = transformReceivement(
-          receivementResponse.data
-        );
+      const modifiedReceimentList = transformReceivement(
+        receivementResponse.data
+      );
 
-        setReceivements([...modifiedReceimentList]);
-      } catch (err) {
-        ToastError({
-          message: 'Ocorreu um erro',
-        });
-      } finally {
-        setLoading(false);
-      }
+      setReceivements([...modifiedReceimentList]);
+    } catch (err) {
+      ToastError({
+        message: 'Ocorreu um erro',
+      });
+    } finally {
+      setLoading(false);
     }
+  }, []);
 
+  useEffect(() => {
     getReceiments();
   }, [transformArrayToSelectOption, ToastError]);
 
@@ -146,6 +148,16 @@ const Receivement: React.FC = () => {
   );
 
   useEffect(() => {
+    const requestInterval = setInterval(() => {
+      getReceiments();
+    }, 120000);
+    return () => {
+      clearInterval(requestInterval);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     async function getTotal() {
       const somatotalQte = receivements.reduce((total, unityCurrent) => {
         return (unityCurrent.PorcentagemProgresso || 0) + total;
@@ -157,6 +169,9 @@ const Receivement: React.FC = () => {
 
     getTotal();
   }, [receivements]);
+
+  const tzoffset = new Date().getTimezoneOffset() * 60000; // offset in milliseconds
+  const date = new Date(Date.now() - tzoffset).toISOString().split('T')[0];
 
   return (
     <PageListStyle>
@@ -191,11 +206,22 @@ const Receivement: React.FC = () => {
                   },
                   {
                     width: 33,
-                    label: 'Data:',
+                    label: 'Data início:',
                     type: 'date',
+                    defaultValue: date,
                     name: 'dataReceibmento',
-                    placeholder: 'Digite a Data de recebimento',
-                    messageErrorOnBlur: 'Digite um data de recebimento',
+                    placeholder: 'Digite uma Data de recebimento de início',
+                    messageErrorOnBlur:
+                      'Digite uma Data de recebimento de início',
+                  },
+                  {
+                    width: 33,
+                    label: 'Data final:',
+                    type: 'date',
+                    defaultValue: date,
+                    name: 'dataReceibmento',
+                    placeholder: 'Digite uma data de recebimento de fim',
+                    messageErrorOnBlur: 'Digite uma data de recebimento de fim',
                   },
                   {
                     width: 33,
@@ -213,7 +239,17 @@ const Receivement: React.FC = () => {
             ) : (
               <>
                 <div className="table-box">
-                  <ProgressBar value={totalReceivement} />
+                  <ProgressBar
+                    value={
+                      Math.trunc(
+                        (receivements.reduce((total, item) => {
+                          return total + item.PorcentagemProgresso;
+                        }, 0) /
+                          (receivements.length || 1)) *
+                          100
+                      ) / 100
+                    }
+                  />
                   <Table<ReceivementItem>
                     rows={[
                       ...receivements.map(item => ({
@@ -229,17 +265,29 @@ const Receivement: React.FC = () => {
                           width: '10%',
                         },
                         props: ['Documento'],
+
                         renderItem: row => {
-                          const icons = [IconProduto];
+                          const icons = [
+                            IconCaixaPendente,
+                            IconCaixaAndamento,
+                            IconCaixaFinalizada,
+                            IconCaixaDivergencia,
+                          ];
                           return (
                             <div className="code-item">
-                              {row.CodigoStatus !== 1 ?? (
-                                <Icon
-                                  color="#000"
-                                  icon={icons[row.CodigoStatus - 2]}
-                                />
-                              )}
+                              {row.CodigoStatus !== 23 ? (
+                                <span className="svg-icon-success">
+                                  <img
+                                    className="svg-icon-success"
+                                    src={icons[row.CodigoStatus - 1]}
+                                    alt={row.CodigoStatus.toString()}
+                                  />
+                                </span>
+                              ) : null}
                               <p>{row.Documento}</p>
+                              <p className="hover-item">
+                                {row.CodigoStatus.toString()}
+                              </p>
                             </div>
                           );
                         },
@@ -248,6 +296,7 @@ const Receivement: React.FC = () => {
                         title: 'Filial',
                         orderable: true,
                         type: 'string',
+                        trunc: 20,
                         props: ['Filial'],
                         cssProps: {
                           width: '15%',
@@ -284,7 +333,7 @@ const Receivement: React.FC = () => {
                       {
                         title: 'Data Expedição',
                         orderable: true,
-                        type: 'date',
+                        type: 'datetime',
                         props: ['DataExpedicao'],
                         cssProps: {
                           width: '15%',
@@ -293,7 +342,7 @@ const Receivement: React.FC = () => {
                       {
                         title: 'Data Recebimento',
                         orderable: true,
-                        type: 'date',
+                        type: 'datetime',
                         props: ['DataRecebimento'],
                         cssProps: {
                           width: '15%',
@@ -313,9 +362,34 @@ const Receivement: React.FC = () => {
                           );
                         },
                       },
+                      {
+                        title: 'Detalhe',
+                        orderable: false,
+                        type: 'string',
+                        cssProps: {
+                          width: '20%',
+                        },
+                        props: ['Documento'],
+                        renderItem: row => {
+                          return (
+                            <div className="row-actions-button-detail">
+                              <button
+                                type="button"
+                                className="action"
+                                onClick={row1 => {
+                                  editReceivement(row.Documento);
+                                }}
+                              >
+                                <img src={SearchIcon} alt="" />
+                                <p className="hover-item">Detalhe</p>
+                              </button>
+                            </div>
+                          );
+                        },
+                      },
                     ]}
                     hidePagination
-                    defaultNumberOfRows={100}
+                    defaultNumberOfRows={1000}
                     paginationOptions={[
                       {
                         value: 50,
@@ -331,9 +405,6 @@ const Receivement: React.FC = () => {
                       },
                     ]}
                     defaultSort="Documento"
-                    onEditRow={row => {
-                      editReceivement(row.Documento);
-                    }}
                   />
                 </div>
               </>

@@ -90,6 +90,11 @@ const Table = styled.table<TableProps>`
             line-height: 21px;
             color: #464e5f;
           }
+
+          .svg-icon-success {
+            fill: #f64e60;
+            background: #f64e60;
+          }
         }
 
         .text {

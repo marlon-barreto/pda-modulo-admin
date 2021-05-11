@@ -2,6 +2,8 @@ import React, { useCallback } from 'react';
 
 import { WindowContainer } from './styles';
 import Table from '../Table';
+import IconCaixaFinalizada from '../../assets/svg/caixa-verde.svg';
+import IconCaixaDivergencia from '../../assets/svg/caixa-vermelha.svg';
 
 interface DetalheProdutoItem {
   id: string;
@@ -65,6 +67,13 @@ const PopUpWindowProduct: React.FC<PopUpWindowProductProps> = ({
                   renderItem: row => {
                     return (
                       <div className="code-item">
+                        {row.Status === 'OK' ? (
+                          <span className="svg-icon-success">
+                            <img src={IconCaixaFinalizada} alt={row.Status} />
+                          </span>
+                        ) : (
+                          <img src={IconCaixaDivergencia} alt={row.Status} />
+                        )}
                         <p>{row.Produto}</p>
                       </div>
                     );
@@ -105,22 +114,6 @@ const PopUpWindowProduct: React.FC<PopUpWindowProductProps> = ({
                   props: ['QuantidadeDivergencia'],
                   cssProps: {
                     width: '10%',
-                  },
-                },
-                {
-                  title: 'Status',
-                  orderable: true,
-                  type: 'string',
-                  cssProps: {
-                    width: '10%',
-                  },
-                  props: ['Status'],
-                  renderItem: row => {
-                    return (
-                      <div className="code-item">
-                        <p>{row.Status}</p>
-                      </div>
-                    );
                   },
                 },
               ]}

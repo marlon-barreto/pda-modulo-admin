@@ -15,11 +15,13 @@ import Table from '../../../../components/Table';
 import LoadingComponent from '../../../../components/LoadingComponent';
 import TitleWithButtons from '../../../../components/TitleWithButtons';
 import ProgressBar from '../../../../components/ProgressBar';
-import IconProduto from '../../../../assets/svg/produto.svg';
 
 import api from '../../../../services/api';
 import apiReceivement from '../../../../services/receivement';
 import SearchIcon from '../../../../assets/svg/SearchGrid.svg';
+
+import IconCaixaFinalizada from '../../../../assets/svg/caixa-verde.svg';
+import IconCaixaDivergencia from '../../../../assets/svg/caixa-vermelha.svg';
 
 interface ReceivementItem {
   id: string;
@@ -195,13 +197,19 @@ const DetailReceivement: React.FC = () => {
             ) : (
               <>
                 <div className="table-box">
-                  <ProgressBar value={porcentagemProgresso} />
+                  <ProgressBar
+                    value={
+                      Math.trunc(
+                        (detailReceivement.reduce((total, item) => {
+                          return total + item.PorcentagemAuditado;
+                        }, 0) /
+                          (detailReceivement.length || 1)) *
+                          100
+                      ) / 100
+                    }
+                  />
                   <Table<DetalheCaixaItem>
-                    rows={[
-                      ...detailReceivement.map(item => ({
-                        ...item,
-                      })),
-                    ]}
+                    rows={detailReceivement}
                     columns={[
                       {
                         title: 'Ordem',
@@ -214,7 +222,19 @@ const DetailReceivement: React.FC = () => {
                         renderItem: row => {
                           return (
                             <div className="code-item">
-                              <img src={IconProduto} alt="" />
+                              {row.Status === 'OK' ? (
+                                <span className="svg-icon-success">
+                                  <img
+                                    src={IconCaixaFinalizada}
+                                    alt={row.Status}
+                                  />
+                                </span>
+                              ) : (
+                                <img
+                                  src={IconCaixaDivergencia}
+                                  alt={row.Status}
+                                />
+                              )}
                               <p>{row.Ordem}</p>
                             </div>
                           );

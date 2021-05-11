@@ -3,7 +3,7 @@ import React from 'react';
 import { Icon as StyledIcon } from './styles';
 
 interface Props {
-  color: string;
+  color?: string;
   icon: string;
 }
 
