@@ -4,6 +4,57 @@ import { Link } from 'react-router-dom';
 export const Container = styled.div`
   width: 100%;
 
+  .dashboard {
+    display: flex;
+
+    .informations-container {
+      margin-top: 56px;
+
+      display: flex;
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+
+      width: 100%;
+
+      .information {
+        max-width: 288px;
+        width: 100%;
+        min-height: 140px;
+        background: #fff;
+
+        padding: 12px 12px 12px 30px;
+        border-radius: 12px;
+
+        margin: 16px 0;
+
+        &:nth-of-type(n + 4) {
+          margin-top: 32px;
+        }
+
+        .title {
+          h1 {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 22px;
+            color: #464e5f;
+          }
+        }
+
+        .text {
+          margin-top: 32px;
+
+          p {
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 37px;
+            color: #464e5f;
+          }
+        }
+      }
+    }
+  }
+
   .block {
     margin-top: 24px;
 
@@ -21,7 +72,11 @@ export const Container = styled.div`
           margin: 16px 0;
           justify-content: space-between;
 
+          flex-wrap: wrap;
+
           div {
+            margin: 0 4px;
+
             p {
               font-size: 12px;
               line-height: 18px;
@@ -42,6 +97,10 @@ export const Container = styled.div`
                 color: #1bc5bd;
               }
             }
+          }
+
+          @media screen and (max-width: 710px) {
+            justify-content: flex-start;
           }
         }
 
