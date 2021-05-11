@@ -189,6 +189,7 @@ const Receivement: React.FC = () => {
             <div className="inputs-box">
               <SearchBoxComponent
                 handleSubmit={handleSubmit}
+                justifycontent="flex-start"
                 inputs={[
                   {
                     width: 33,

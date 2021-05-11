@@ -185,6 +185,32 @@ const DetailReceivement: React.FC = () => {
               back
               handleBack={handleBackPage}
             />
+            <div className="informations-line">
+              <div>
+                <p>Documento</p>
+                <span>100508</span>
+              </div>
+              <div>
+                <p>Documento</p>
+                <span>100508</span>
+              </div>
+              <div>
+                <p>Documento</p>
+                <span className="green">100508</span>
+              </div>
+              <div>
+                <p>Documento</p>
+                <span>100508</span>
+              </div>
+              <div>
+                <p>Documento</p>
+                <span className="red">100508</span>
+              </div>
+              <div>
+                <p>Documento</p>
+                <span>100508</span>
+              </div>
+            </div>
             <div className="inputs-box">
               <div>
                 <span>Documento:</span>

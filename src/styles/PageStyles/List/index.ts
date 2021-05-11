@@ -15,6 +15,36 @@ export const Container = styled.div`
         border: 1px solid #e5eaee;
         border-radius: 12px;
 
+        .informations-line {
+          padding: 0 24px;
+          display: flex;
+          margin: 16px 0;
+          justify-content: space-between;
+
+          div {
+            p {
+              font-size: 12px;
+              line-height: 18px;
+              color: #464e5f;
+            }
+
+            span {
+              font-size: 18px;
+              line-height: 27px;
+              opacity: 0.7;
+              margin-top: 4px;
+
+              &.red {
+                color: #f64e60;
+              }
+
+              &.green {
+                color: #1bc5bd;
+              }
+            }
+          }
+        }
+
         .inputs-box {
           padding: 16px;
         }
