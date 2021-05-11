@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
 import { useAuth } from '../../hooks/Auth';
@@ -24,6 +25,7 @@ interface LinkProps {
 }
 
 interface PagesProps {
+  code: number;
   name: string;
   links?: LinkProps[];
   fatherCode?: number;
@@ -45,6 +47,7 @@ const SignedLayout: React.FC = ({ children }) => {
   const [hovered, setHovered] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [pages, setPages] = useState([] as PagesProps[]);
+  const history = useHistory();
 
   const windowResize = useCallback(() => {
     if (window.innerWidth <= 910) {
@@ -81,28 +84,42 @@ const SignedLayout: React.FC = ({ children }) => {
 
   useEffect(() => {
     async function getMenu() {
+      const profile = localStorage.getItem('@pdamodules::profile');
+      const module = localStorage.getItem('@pdamodules::module');
+
       const response: PagesRequest = await api.patch('ProfileSystem', {
-        code: 43,
+        code: profile,
       });
 
-      // Codigo fixo
       // const allPages = response.data[0].systemList[0].systemMenuList;
+      if (!response.data[0].systemList) {
+        history.push('/505');
+      }
 
       const listSystemList = response.data[0].systemList;
       // filtrar codigo do modulo 42 ou 1
       // http://localhost:3001/?p_param=1080|42
 
-      const listProductDetail = listSystemList.filter(item => item.code === 1);
+      const listProductDetail = listSystemList.filter(
+        item => item.code === Number(module)
+      );
+
+      if (!listProductDetail[0].systemMenuList) {
+        history.push('/505');
+      }
+
       const allPages = listProductDetail[0].systemMenuList;
 
       const normalPages = allPages.filter(
         (item: PagesProps) => !item.fatherCode
       );
 
-      // Aqui precisa filtar o filhos pelo fatherCode. O pai seria todos que não tem fatherCode.
-      const childrenPages = normalPages.map((_: PagesProps, index: number) => {
+      // filtar o filhos pelo fatherCode. O pai seria todos que não tem fatherCode.
+      const childrenPages = normalPages.map((menuPricipal: PagesProps) => {
         return allPages
-          .filter((allItem: PagesProps) => allItem.fatherCode === index + 1)
+          .filter(
+            (allItem: PagesProps) => allItem.fatherCode === menuPricipal.code
+          )
           .map((allItem: PagesProps) => ({
             name: allItem.name,
             url: `/${allItem.page}`,
