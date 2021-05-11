@@ -86,6 +86,9 @@ const DetailReceivement: React.FC = () => {
 
   const [productDetail, setProductDetail] = useState(NaN as number);
 
+  const [datarecebimento, seDataRecebimento] = useState('');
+  const [dataexpedicao, seDataExpedicao] = useState('');
+
   const history = useHistory();
 
   const transformDetailReceivement = useCallback(array => {
@@ -124,6 +127,30 @@ const DetailReceivement: React.FC = () => {
         setPorcentagemProgresso(receivementResponse.data.PorcentagemProgresso);
 
         setDetailReceivement([...modifiedDetailReceimentList]);
+
+        const formatDataRecebimento = new Date(
+          receivementResponse.data.DataRecebimento
+        )
+          .toISOString()
+          .split('T')[0]
+          .split('-')
+          .slice(0, 3)
+          .reverse()
+          .join('/');
+
+        seDataRecebimento(formatDataRecebimento);
+
+        const formatDataExpedicao = new Date(
+          receivementResponse.data.DataExpedicao
+        )
+          .toISOString()
+          .split('T')[0]
+          .split('-')
+          .slice(0, 3)
+          .reverse()
+          .join('/');
+
+        seDataExpedicao(formatDataExpedicao);
       } catch (err) {
         ToastError({
           message: 'Ocorreu um erro',
@@ -188,33 +215,35 @@ const DetailReceivement: React.FC = () => {
             <div className="informations-line">
               <div>
                 <p>Documento</p>
-                <span>100508</span>
+                <span className="red">{receivement.Documento}</span>
               </div>
               <div>
-                <p>Documento</p>
-                <span>100508</span>
+                <p>Fornecedor</p>
+                <span>{receivement.Fornecedor}</span>
               </div>
               <div>
-                <p>Documento</p>
-                <span className="green">100508</span>
+                <p>Data da Expedição</p>
+                <span className="green">{dataexpedicao}</span>
               </div>
               <div>
-                <p>Documento</p>
-                <span>100508</span>
+                <p>Status</p>
+                <span>{receivement.DescricaoStatus}</span>
               </div>
               <div>
-                <p>Documento</p>
-                <span className="red">100508</span>
+                <p>Data Recebimento</p>
+                <span className="red">{datarecebimento}</span>
               </div>
               <div>
-                <p>Documento</p>
-                <span>100508</span>
+                <p>Horario Inicio</p>
+                <span>{receivement.HoraInicio}</span>
               </div>
-            </div>
-            <div className="inputs-box">
               <div>
-                <span>Documento:</span>
-                <span>{receivement.Documento}</span>
+                <p>Horaraio Final</p>
+                <span>{receivement.HoraFim}</span>
+              </div>
+              <div>
+                <p>Tempo</p>
+                <span>{receivement.TempoRecebimento}</span>
               </div>
             </div>
 

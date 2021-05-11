@@ -45,6 +45,8 @@ const routes: React.FC = () => {
         <Route path="/User/edit/:code" exact component={EditUser} isPrivate />
         <Route path="/User/create" component={CreateUser} isPrivate />
 
+        <Route path="/Recebimento" exact component={Receivement} isPrivate />
+
         <Route path="/Receivement" exact component={Receivement} isPrivate />
         <Route
           path="/Receivement/Detail/:code"

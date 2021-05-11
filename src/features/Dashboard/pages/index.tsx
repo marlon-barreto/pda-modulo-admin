@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container } from '../../../styles/PageStyles/List';
+import ProgressBar from '../../../components/ProgressBar';
 
 const Dashboard: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="text">
                 <p>10 / 21</p>
+                <ProgressBar value={10} />
               </div>
             </div>
             <div className="information">
@@ -22,6 +24,7 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="text">
                 <p>10 / 21</p>
+                <ProgressBar value={30} />
               </div>
             </div>
             <div className="information">
@@ -30,6 +33,7 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="text">
                 <p>10 / 21</p>
+                <ProgressBar value={100} />
               </div>
             </div>
             <div className="information">
@@ -38,6 +42,7 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="text">
                 <p>10 / 21</p>
+                <ProgressBar value={70} />
               </div>
             </div>
           </div>
