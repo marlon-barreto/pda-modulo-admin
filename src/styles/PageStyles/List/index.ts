@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import DashboardItemBackground from '../../../assets/svg/dashboard-item-background.svg';
+
 export const Container = styled.div`
   width: 100%;
 
@@ -27,6 +29,11 @@ export const Container = styled.div`
         border-radius: 12px;
 
         margin: 16px 0;
+
+        background-image: url(${DashboardItemBackground});
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right top;
 
         &:nth-of-type(n + 4) {
           margin-top: 32px;
