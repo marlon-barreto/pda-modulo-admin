@@ -16,6 +16,7 @@ import DetailReceivement from '../features/Receivement/pages/DetailReceivement';
 import NotFoundPage from '../layouts/NotFoundPage';
 import NotAuthorized from '../layouts/NotAuthorized';
 import SignIn from '../layouts/SignIn';
+import Dashboard from '../features/Dashboard/pages';
 
 const routes: React.FC = () => {
   return (
@@ -51,6 +52,7 @@ const routes: React.FC = () => {
           component={DetailReceivement}
           isPrivate
         />
+        <Route path="/Dashboard" exact component={Dashboard} isPrivate />
         <Route path="/505" component={NotAuthorized} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
