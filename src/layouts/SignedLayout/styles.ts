@@ -106,6 +106,7 @@ export const Container = styled.div<ContainerProps>`
     flex-direction: column;
 
     .footer {
+      background: red;
       width: 100%;
       padding-top: 64px;
       position: relative;

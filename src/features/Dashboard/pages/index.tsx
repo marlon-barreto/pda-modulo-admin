@@ -7,6 +7,7 @@ import api from '../../../services/api';
 
 import { Container } from '../../../styles/PageStyles/List';
 import Breadcrumb from '../../../components/Breadcrumb';
+import LoadingComponent from '../../../components/LoadingComponent';
 
 interface DashboardItem {
   Page: string;
@@ -18,20 +19,32 @@ interface DashboardItem {
 
 const Dashboard: React.FC = () => {
   const [dashboardItens, setDashboardItens] = useState([] as DashboardItem[]);
+  const dashboardRefreshRateInSeconds = 60;
+  const [isLoading, setLoading] = useState(true);
+
+  async function getDashboardInformation() {
+    try {
+      setLoading(true);
+
+      const response = await api.get('Dashboard');
+
+      setDashboardItens([...response.data]);
+
+      setLoading(false);
+    } catch (error) {
+      console.warn(error);
+    }
+  }
 
   useEffect(() => {
-    async function getResponse() {
-      try {
-        const response = await api.get('Dashboard');
+    getDashboardInformation();
 
-        setDashboardItens([...response.data]);
-      } catch (error) {
-        console.warn(error);
-      }
-    }
-
-    getResponse();
+    setInterval(getDashboardInformation, dashboardRefreshRateInSeconds * 1000);
   }, []);
+
+  function convertNumber(number: number) {
+    return number.toLocaleString().replace(',', '.');
+  }
 
   return (
     <Container>
@@ -42,24 +55,32 @@ const Dashboard: React.FC = () => {
         {`Administração > Dashboard`}
       </Breadcrumb>
       <div className="container">
-        <div className="dashboard">
-          <div className="informations-container">
-            {dashboardItens.length !== 0 &&
-              dashboardItens.map(item => (
-                <div className="information">
-                  <Link key={item.Page} to={item.Page}>
-                    <div className="title">
-                      <h1>{item.Modulo}</h1>
-                    </div>
-                    <div className="text">
-                      <p>{`${item.Planejado} / ${item.Realizado}`}</p>
-                      <ProgressBar value={item.Porcentagem} />
-                    </div>
-                  </Link>
-                </div>
-              ))}
+        {isLoading ? (
+          <LoadingComponent />
+        ) : (
+          <div className="dashboard">
+            <div className="informations-container">
+              {dashboardItens.length !== 0 &&
+                dashboardItens.map(item => (
+                  <div key={item.Modulo} className="information">
+                    <Link key={item.Page} to={item.Page}>
+                      <div className="title">
+                        <h1>{item.Modulo}</h1>
+                      </div>
+                      <div className="text">
+                        <p>
+                          {`${convertNumber(item.Planejado)} / ${convertNumber(
+                            item.Realizado
+                          )}`}
+                        </p>
+                        <ProgressBar value={item.Porcentagem} />
+                      </div>
+                    </Link>
+                  </div>
+                ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </Container>
   );
