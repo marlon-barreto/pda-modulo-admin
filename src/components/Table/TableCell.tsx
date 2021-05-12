@@ -32,6 +32,19 @@ function TableCell<T extends DefaultRowProps>({
   }
 
   switch (column.type) {
+    case 'number': {
+      formatRowColumnText = rowColumnText.reduce((text, item, index) => {
+        if (index === 0) {
+          return (Math.trunc((item as number) * 100) / 100).toLocaleString(
+            'pt-BR'
+          );
+        }
+        return `${text} ${(
+          Math.trunc((item as number) * 100) / 100
+        ).toLocaleString('pt-BR')}`;
+      }, '');
+      break;
+    }
     case 'currency':
       formatRowColumnText = new Intl.NumberFormat('pt-BR', {
         currency: 'BRL',
@@ -97,6 +110,15 @@ function TableCell<T extends DefaultRowProps>({
     formatRowColumnText = column.formatter(row);
   }
 
+  if (column.type === 'number') {
+    console.log(
+      formatRowColumnText,
+      (Math.trunc((rowColumnText[0] as number) * 100) / 100).toLocaleString(
+        'pt-BR'
+      )
+    );
+  }
+
   return (
     <CellContainer
       key={`${column.title}.${Math.random() + new Date().getTime()}`}
@@ -104,7 +126,11 @@ function TableCell<T extends DefaultRowProps>({
       stylePattern={column.type}
       style={{ ...column.cssProps }}
     >
-      <div>
+      <div
+        style={{
+          padding: '8px',
+        }}
+      >
         {booleanClass && (booleanClass === 'true' ? <p>Sim</p> : <p>Não</p>)}
         {!booleanClass && (
           <p>

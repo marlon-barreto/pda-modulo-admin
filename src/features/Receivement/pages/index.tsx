@@ -21,7 +21,6 @@ import IconCaixaPendente from '../../../assets/svg/caixa-branca.svg';
 import SearchIcon from '../../../assets/svg/SearchGrid.svg';
 
 import api from '../../../services/api';
-import apiReceivement from '../../../services/receivement';
 import Icon from '../../../components/Icon';
 
 interface Request<Item> {
@@ -87,8 +86,8 @@ const Receivement: React.FC = () => {
         Request<ReceivementItem>,
         Request<StatusItem>
       ] = await Promise.all([
-        apiReceivement.get('receivement'),
-        apiReceivement.get('receivement/status'),
+        api.patch('RecebimentoTruck', {}),
+        api.get('StatusRecebimento'),
       ]);
 
       const modifiedStatusList = transformArrayToSelectOption(
@@ -119,12 +118,16 @@ const Receivement: React.FC = () => {
     async data => {
       try {
         setLoading(true);
-        const receivementResponse = await api.patch('receivement', {
+        const receivementResponse = await api.patch('RecebimentoTruck', {
           ...data,
           active: true,
         });
 
-        setReceivements([...receivementResponse.data]);
+        const modifiedReceimentList = transformReceivement(
+          receivementResponse.data
+        );
+
+        setReceivements([...modifiedReceimentList]);
 
         Toastsuccess({
           message: 'Pesquisa feita com sucesso!',
@@ -207,6 +210,14 @@ const Receivement: React.FC = () => {
                   },
                   {
                     width: 33,
+                    label: 'Status',
+                    name: 'status.code',
+                    type: 'select',
+                    placeholder: 'Selecione o Status',
+                    options: statusList,
+                  },
+                  {
+                    width: 33,
                     label: 'Data início:',
                     type: 'date',
                     defaultValue: date,
@@ -223,14 +234,6 @@ const Receivement: React.FC = () => {
                     name: 'dataReceibmento',
                     placeholder: 'Digite uma data de recebimento de fim',
                     messageErrorOnBlur: 'Digite uma data de recebimento de fim',
-                  },
-                  {
-                    width: 33,
-                    label: 'Status',
-                    name: 'status.code',
-                    type: 'select',
-                    placeholder: 'Selecione o Status',
-                    options: statusList,
                   },
                 ]}
               />
@@ -286,9 +289,6 @@ const Receivement: React.FC = () => {
                                 </span>
                               ) : null}
                               <p>{row.Documento}</p>
-                              <p className="hover-item">
-                                {row.CodigoStatus.toString()}
-                              </p>
                             </div>
                           );
                         },
@@ -297,7 +297,7 @@ const Receivement: React.FC = () => {
                         title: 'Filial',
                         orderable: true,
                         type: 'string',
-                        trunc: 20,
+                        trunc: 10,
                         props: ['Filial'],
                         cssProps: {
                           width: '15%',
@@ -319,7 +319,7 @@ const Receivement: React.FC = () => {
                         type: 'number',
                         props: ['QuantidadeVolume'],
                         cssProps: {
-                          width: '10%',
+                          width: '5%',
                         },
                       },
                       {
@@ -332,7 +332,7 @@ const Receivement: React.FC = () => {
                         },
                       },
                       {
-                        title: 'Data Expedição',
+                        title: 'Dt.Expedição',
                         orderable: true,
                         type: 'datetime',
                         props: ['DataExpedicao'],
@@ -341,7 +341,7 @@ const Receivement: React.FC = () => {
                         },
                       },
                       {
-                        title: 'Data Recebimento',
+                        title: 'Dt.Recebimento',
                         orderable: true,
                         type: 'datetime',
                         props: ['DataRecebimento'],
@@ -351,7 +351,7 @@ const Receivement: React.FC = () => {
                       },
                       {
                         title: 'Progresso',
-                        orderable: false,
+                        orderable: true,
                         type: 'number',
                         props: ['PorcentagemProgresso'],
                         cssProps: {
@@ -368,7 +368,7 @@ const Receivement: React.FC = () => {
                         orderable: false,
                         type: 'string',
                         cssProps: {
-                          width: '20%',
+                          width: '5%',
                         },
                         props: ['Documento'],
                         renderItem: row => {

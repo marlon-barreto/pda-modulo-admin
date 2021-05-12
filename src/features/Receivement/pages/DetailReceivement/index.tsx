@@ -17,11 +17,12 @@ import TitleWithButtons from '../../../../components/TitleWithButtons';
 import ProgressBar from '../../../../components/ProgressBar';
 
 import api from '../../../../services/api';
-import apiReceivement from '../../../../services/receivement';
 import SearchIcon from '../../../../assets/svg/SearchGrid.svg';
 
 import IconCaixaFinalizada from '../../../../assets/svg/caixa-verde.svg';
 import IconCaixaDivergencia from '../../../../assets/svg/caixa-vermelha.svg';
+
+import { ContainerHeader } from './styles';
 
 interface ReceivementItem {
   id: string;
@@ -88,6 +89,7 @@ const DetailReceivement: React.FC = () => {
 
   const [datarecebimento, seDataRecebimento] = useState('');
   const [dataexpedicao, seDataExpedicao] = useState('');
+  const [fornecedor, seFornecedor] = useState('');
 
   const history = useHistory();
 
@@ -114,8 +116,8 @@ const DetailReceivement: React.FC = () => {
       try {
         setLoading(true);
 
-        const receivementResponse = await apiReceivement.get<ReceivementItem>(
-          `receivement/${code}`
+        const receivementResponse = await api.get<ReceivementItem>(
+          `RecebimentoTruck/${code}`
         );
 
         const modifiedDetailReceimentList = transformDetailReceivement(
@@ -149,6 +151,9 @@ const DetailReceivement: React.FC = () => {
           .slice(0, 3)
           .reverse()
           .join('/');
+
+        const formataFornecedor = receivementResponse.data.Fornecedor;
+        seFornecedor(formataFornecedor.substr(0, 20));
 
         seDataExpedicao(formatDataExpedicao);
       } catch (err) {
@@ -219,7 +224,7 @@ const DetailReceivement: React.FC = () => {
               </div>
               <div>
                 <p>Fornecedor</p>
-                <span>{receivement.Fornecedor}</span>
+                <span>{fornecedor}</span>
               </div>
               <div>
                 <p>Data da Expedição</p>

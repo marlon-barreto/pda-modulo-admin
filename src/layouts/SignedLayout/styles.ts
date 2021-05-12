@@ -121,7 +121,6 @@ export const SideMenu = styled.nav<SideMenuProps>`
   display: flex;
   flex-direction: column;
   z-index: 100;
-
   overflow-y: auto;
 
   .content {

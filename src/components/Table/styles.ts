@@ -324,7 +324,6 @@ export const CellContainer = styled.td<CellContainerProps>`
   max-width: 25%;
   min-width: 5%;
   width: 10%;
-  padding: 4px;
 
   div {
     p {
@@ -347,6 +346,7 @@ export const CellContainer = styled.td<CellContainerProps>`
     css`
       min-width: 20%;
       width: 10%;
+      text-align: right;
     `}
 
   ${props =>
