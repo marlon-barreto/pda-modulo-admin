@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsHouse } from 'react-icons/bs';
+import { Link, useLocation } from 'react-router-dom';
 import ProgressBar from '../../../components/ProgressBar';
 
 import api from '../../../services/api';
@@ -34,8 +35,11 @@ const Dashboard: React.FC = () => {
 
   return (
     <Container>
-      <Breadcrumb title="DashBord" icon={<BsHouse size={16} color="#c0c0c6" />}>
-        {`Administração > DashBord`}
+      <Breadcrumb
+        title="Dashboard"
+        icon={<BsHouse size={16} color="#c0c0c6" />}
+      >
+        {`Administração > Dashboard`}
       </Breadcrumb>
       <div className="container">
         <div className="dashboard">
@@ -43,15 +47,15 @@ const Dashboard: React.FC = () => {
             {dashboardItens.length !== 0 &&
               dashboardItens.map(item => (
                 <div className="information">
-                  <a href={`${item.Page}`} className="link" key={item.Page}>
+                  <Link key={item.Page} to={item.Page}>
                     <div className="title">
                       <h1>{item.Modulo}</h1>
                     </div>
                     <div className="text">
-                      <p>{`${item.Realizado} / ${item.Planejado}`}</p>
+                      <p>{`${item.Planejado} / ${item.Realizado}`}</p>
                       <ProgressBar value={item.Porcentagem} />
                     </div>
-                  </a>
+                  </Link>
                 </div>
               ))}
           </div>

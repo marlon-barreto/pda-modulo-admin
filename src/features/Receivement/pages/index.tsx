@@ -319,7 +319,7 @@ const Receivement: React.FC = () => {
                         type: 'number',
                         props: ['QuantidadeVolume'],
                         cssProps: {
-                          width: '10%',
+                          width: '5%',
                         },
                       },
                       {
@@ -332,7 +332,7 @@ const Receivement: React.FC = () => {
                         },
                       },
                       {
-                        title: 'Data Expedição',
+                        title: 'Dt.Expedição',
                         orderable: true,
                         type: 'datetime',
                         props: ['DataExpedicao'],
@@ -341,7 +341,7 @@ const Receivement: React.FC = () => {
                         },
                       },
                       {
-                        title: 'Data Recebimento',
+                        title: 'Dt.Recebimento',
                         orderable: true,
                         type: 'datetime',
                         props: ['DataRecebimento'],
@@ -368,7 +368,7 @@ const Receivement: React.FC = () => {
                         orderable: false,
                         type: 'string',
                         cssProps: {
-                          width: '20%',
+                          width: '5%',
                         },
                         props: ['Documento'],
                         renderItem: row => {
