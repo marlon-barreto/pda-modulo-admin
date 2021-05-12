@@ -28,7 +28,7 @@ export const Container = styled.div`
         padding: 12px 12px 12px 30px;
         border-radius: 12px;
 
-        margin: 16px 0;
+        margin: 4px 0;
 
         background-image: url(${DashboardItemBackground});
         background-size: contain;
@@ -53,6 +53,14 @@ export const Container = styled.div`
             line-height: 37px;
             color: #464e5f;
           }
+        }
+      }
+
+      @media screen and (max-width: 610px) {
+        justify-content: center;
+
+        .information {
+          max-width: 100%;
         }
       }
     }

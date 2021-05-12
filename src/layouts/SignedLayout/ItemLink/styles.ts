@@ -20,10 +20,6 @@ export const Container = styled.div<ContainerProps>`
       align-items: center;
       justify-content: space-between;
 
-      &:hover {
-        background: ${darken(0.05, '#1e1e2d')};
-      }
-
       .left {
         display: flex;
         align-items: center;
