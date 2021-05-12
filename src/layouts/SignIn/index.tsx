@@ -26,7 +26,7 @@ const SignIn: React.FC = () => {
             if (!response.name && response.active) {
               history.push('/505');
             } else {
-              history.push('/Profile');
+              history.push('/Dashboard');
             }
           })
           .catch(err => {

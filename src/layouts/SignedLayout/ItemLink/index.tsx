@@ -29,6 +29,7 @@ const ItemLink: React.FC<ItemLinkProps> = ({
   const { pathname } = useLocation();
   const [opened, setOpened] = useState(openedState);
 
+  // Menu aberto geral
   // useEffect(() => {
   //   const result = links?.some(link => pathname === link.url || '/');
 

@@ -57,12 +57,14 @@ const PopUpWindowProduct: React.FC<PopUpWindowProductProps> = ({
               ]}
               columns={[
                 {
+                  id: 'number',
                   title: 'Produto',
                   orderable: true,
                   type: 'number',
                   cssProps: {
                     width: '10%',
                   },
+
                   props: ['Produto'],
                   renderItem: row => {
                     return (

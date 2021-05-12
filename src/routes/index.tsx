@@ -13,16 +13,19 @@ import EditUser from '../features/Users/pages/EditUser';
 
 import Receivement from '../features/Receivement/pages';
 import DetailReceivement from '../features/Receivement/pages/DetailReceivement';
+
+import DashBoard from '../features/Dashboard/pages';
+
 import NotFoundPage from '../layouts/NotFoundPage';
 import NotAuthorized from '../layouts/NotAuthorized';
 import SignIn from '../layouts/SignIn';
-import Dashboard from '../features/Dashboard/pages';
 
 const routes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={SignIn} />
+        <Route path="/DashBoard" exact component={DashBoard} isPrivate />
         <Route path="/Profile" exact component={Profiles} isPrivate />
         <Route
           path="/Profile/create"
@@ -46,7 +49,6 @@ const routes: React.FC = () => {
         <Route path="/User/create" component={CreateUser} isPrivate />
 
         <Route path="/Recebimento" exact component={Receivement} isPrivate />
-
         <Route path="/Receivement" exact component={Receivement} isPrivate />
         <Route
           path="/Receivement/Detail/:code"
@@ -54,7 +56,6 @@ const routes: React.FC = () => {
           component={DetailReceivement}
           isPrivate
         />
-        <Route path="/Dashboard" exact component={Dashboard} isPrivate />
         <Route path="/505" component={NotAuthorized} />
         <Route path="*" component={NotFoundPage} />
       </Switch>

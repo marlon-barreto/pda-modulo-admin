@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { darken } from 'polished';
 
 import DashboardItemBackground from '../../../assets/svg/dashboard-item-background.svg';
 
@@ -34,6 +35,32 @@ export const Container = styled.div`
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right top;
+
+        &:hover {
+          transition: background 0.1s;
+          cursor: pointer;
+          color: #fff;
+
+          .title {
+            h1 {
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 22px;
+              color: #1bc5bd;
+            }
+          }
+
+          .text {
+            margin-top: 32px;
+
+            p {
+              font-weight: bold;
+              font-size: 25px;
+              line-height: 37px;
+              color: #1bc5bd;
+            }
+          }
+        }
 
         .title {
           h1 {

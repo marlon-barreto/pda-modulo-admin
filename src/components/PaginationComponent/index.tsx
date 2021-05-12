@@ -199,11 +199,11 @@ const PaginationComponent: React.FC<PaginationProps> = ({
 
         <div className="text">
           <p>
-            {`Showing rows ${
+            {`Registros ${
               currentPage === 1
                 ? currentPage
                 : currentPage * numberOfItens - numberOfItens
-            } to ${currentPage * numberOfItens} of ${totalItens}`}
+            } a ${currentPage * numberOfItens} total ${totalItens}`}
           </p>
         </div>
       </Form>

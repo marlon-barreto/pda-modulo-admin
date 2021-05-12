@@ -22,5 +22,10 @@ A aplicação será espelhada na porta `3001`, podendo ser acessada pela url:
 ### `http://localhost:3001/?p_param=1080|1`
 ### `http://localhost:3001/?p_param=1080|42`
 
+Criar arquivo .env
+REACT_APP_ENV=dev
+REACT_APP_DEV_URL=http://pda.mockable.io/api/
+REACT_APP_PROD_URL=http://179.184.159.52:9015/api/
+
 
 

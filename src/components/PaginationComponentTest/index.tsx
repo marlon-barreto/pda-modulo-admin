@@ -176,12 +176,12 @@ const PaginationComponent: React.FC<IPaginationProps> = ({
         </div>
         <div className="text">
           <p>
-            {`Showing rows ${page * rowsPerPage + 1} to ${
+            {`Registros ${page * rowsPerPage + 1} a ${
               // (page + 1) * rowsPerPage
               ([...Array(count).keys()]
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .pop() || 0) + 1
-            } of ${count}`}
+            } total ${count}`}
           </p>
         </div>
       </div>
