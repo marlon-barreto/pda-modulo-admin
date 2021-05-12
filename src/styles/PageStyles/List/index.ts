@@ -20,7 +20,7 @@ export const Container = styled.div`
       width: 100%;
 
       .information {
-        max-width: 288px;
+        max-width: 218px;
         width: 100%;
         min-height: 140px;
         background: #fff;
@@ -34,10 +34,6 @@ export const Container = styled.div`
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right top;
-
-        &:nth-of-type(n + 4) {
-          margin-top: 32px;
-        }
 
         .title {
           h1 {

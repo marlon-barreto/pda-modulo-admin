@@ -29,13 +29,13 @@ const ItemLink: React.FC<ItemLinkProps> = ({
   const { pathname } = useLocation();
   const [opened, setOpened] = useState(openedState);
 
-  useEffect(() => {
-    const result = links?.some(link => pathname === link.url || '/');
+  // useEffect(() => {
+  //   const result = links?.some(link => pathname === link.url || '/');
 
-    if (result) {
-      setOpened(true);
-    }
-  }, [links, pathname]);
+  //   if (result) {
+  //     setOpened(true);
+  //   }
+  // }, [links, pathname]);
 
   return (
     <Container containerClosed={closed} opened={opened}>
