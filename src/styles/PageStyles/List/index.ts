@@ -8,7 +8,6 @@ export const Container = styled.div`
   width: 100%;
 
   .dashboard {
-    background: red;
     display: flex;
 
     .informations-container {

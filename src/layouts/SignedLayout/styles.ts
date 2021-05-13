@@ -106,11 +106,10 @@ export const Container = styled.div<ContainerProps>`
     flex-direction: column;
 
     .footer {
-      background: red;
       width: 100%;
-      padding-top: 64px;
+      padding-top: 80px;
       position: relative;
-      bottom: 0;
+      bottom: 64px;
       flex-grow: 1;
     }
   }
