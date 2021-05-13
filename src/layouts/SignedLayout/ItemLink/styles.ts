@@ -28,6 +28,9 @@ export const Container = styled.div<ContainerProps>`
           width: 24px;
           height: 24px;
 
+          filter: ${props =>
+            props.opened ? 'grayscale(0%)' : 'grayscale(100%)'};
+
           img {
             max-width: 100%;
           }
@@ -50,6 +53,22 @@ export const Container = styled.div<ContainerProps>`
         transition: transform 0.3s;
         transform: ${props =>
           props.opened ? 'rotate(0deg)' : 'rotate(-90deg)'};
+
+        opacity: ${props => (props.opened ? 1 : 0.3)};
+      }
+
+      &:hover {
+        background: #1b1b28;
+
+        .left {
+          .icon {
+            filter: grayscale(0%);
+          }
+        }
+
+        .arrow {
+          opacity: 1;
+        }
       }
     }
   }
