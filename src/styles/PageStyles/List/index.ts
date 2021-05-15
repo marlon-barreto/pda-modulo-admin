@@ -9,6 +9,7 @@ export const Container = styled.div`
 
   .dashboard {
     display: flex;
+    z-index: 1000;
 
     .informations-container {
       margin-top: 56px;
@@ -25,6 +26,7 @@ export const Container = styled.div`
         width: 100%;
         min-height: 140px;
         background: #fff;
+        cursor: pointer;
 
         padding: 12px 12px 12px 30px;
         border-radius: 12px;
@@ -95,6 +97,7 @@ export const Container = styled.div`
 
   .block {
     margin-top: 24px;
+    padding-bottom: 60px;
 
     .container {
       .content {
