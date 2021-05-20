@@ -102,6 +102,36 @@ export const Container = styled.div`
           margin-top: 8px;
         }
       }
+
+      &.filter {
+        background: #18c6bb;
+        position: relative;
+
+        .text {
+          color: #fff;
+        }
+
+        .filter-box {
+          position: absolute;
+          top: calc(100% + 16px);
+          right: 0;
+          padding: 24px;
+          background: #ffffff;
+          -webkit-box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
+
+          border-radius: 16px;
+          width: 500px;
+
+          z-index: 100000;
+
+          .filter-content {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
 `;

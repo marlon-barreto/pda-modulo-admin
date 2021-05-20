@@ -188,8 +188,61 @@ const Receivement: React.FC = () => {
       <div className="block">
         <div className="container">
           <div className="content">
-            <TitleWithButtons title="Recebimento de Caminhão" />
-            <div className="inputs-box">
+            <TitleWithButtons
+              title="Recebimento de Caminhão"
+              filter
+              filterContent={() => (
+                <SearchBoxComponent
+                  handleSubmit={handleSubmit}
+                  justifycontent="flex-start"
+                  inputs={[
+                    {
+                      width: 33,
+                      label: 'Documento:',
+                      name: 'documento',
+                      placeholder: 'Digite o nome do Documento',
+                      messageErrorOnBlur: 'Digite um nome de Documento',
+                    },
+                    {
+                      width: 33,
+                      label: 'Fornecedor:',
+                      name: 'fornecedor',
+                      placeholder: 'Digite o nome do fornecedor',
+                      messageErrorOnBlur: 'Digite um nome de fornecedor',
+                    },
+                    {
+                      width: 33,
+                      label: 'Status',
+                      name: 'status.code',
+                      type: 'select',
+                      placeholder: 'Selecione o Status',
+                      options: statusList,
+                    },
+                    {
+                      width: 33,
+                      label: 'Data início:',
+                      type: 'date',
+                      defaultValue: date,
+                      name: 'dataReceibmento',
+                      placeholder: 'Digite uma Data de recebimento de início',
+                      messageErrorOnBlur:
+                        'Digite uma Data de recebimento de início',
+                    },
+                    {
+                      width: 33,
+                      label: 'Data final:',
+                      type: 'date',
+                      defaultValue: date,
+                      name: 'dataReceibmento',
+                      placeholder: 'Digite uma data de recebimento de fim',
+                      messageErrorOnBlur:
+                        'Digite uma data de recebimento de fim',
+                    },
+                  ]}
+                />
+              )}
+            />
+            {/* <div className="inputs-box">
               <SearchBoxComponent
                 handleSubmit={handleSubmit}
                 justifycontent="flex-start"
@@ -237,7 +290,7 @@ const Receivement: React.FC = () => {
                   },
                 ]}
               />
-            </div>
+            </div> */}
             {loading ? (
               <LoadingComponent />
             ) : (
