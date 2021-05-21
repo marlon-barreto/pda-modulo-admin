@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { AiOutlineReload } from 'react-icons/ai';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import { FaFilter } from 'react-icons/fa';
+import EnhanceWithClickOutside from 'react-click-outside';
 
 import { Container } from './styles';
 

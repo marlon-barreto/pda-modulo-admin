@@ -107,6 +107,10 @@ export const Container = styled.div`
         background: #18c6bb;
         position: relative;
 
+        &:hover {
+          background: ${darken(0.05, '#18c6bb')};
+        }
+
         .text {
           color: #fff;
         }
@@ -127,7 +131,7 @@ export const Container = styled.div`
 
       .filter-box {
         position: absolute;
-        top: calc(100% + 16px);
+        top: calc(100% + 8px);
         right: 0;
         padding: 24px;
         background: #ffffff;

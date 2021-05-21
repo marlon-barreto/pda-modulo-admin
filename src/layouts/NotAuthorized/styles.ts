@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Background from '../../assets/images/404.jpeg';
+
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -8,19 +10,28 @@ export const Container = styled.div`
   left: 0;
   z-index: 1001;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
 
-  .h1 {
-    font-size: 10rem;
+  background-image: url(${Background});
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+
+  padding: 64px 112px;
+
+  h1 {
+    font-size: 72px;
     color: #3f4254;
     margin-top: 3.75rem;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.2;
   }
-  .p {
-    font-size: 1.5rem;
+
+  p {
+    font-size: 16px;
     color: #b5b5c3;
     font-weight: 400;
     margin-top: 0;
