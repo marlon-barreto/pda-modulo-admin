@@ -110,26 +110,39 @@ export const Container = styled.div`
         .text {
           color: #fff;
         }
+      }
+    }
 
-        .filter-box {
-          position: absolute;
-          top: calc(100% + 16px);
-          right: 0;
-          padding: 24px;
-          background: #ffffff;
-          -webkit-box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
+    .filter-row {
+      position: relative;
 
-          border-radius: 16px;
-          width: 500px;
+      .filter-header {
+        width: 100%;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+        display: flex;
+        align-items: center;
+      }
 
-          z-index: 100000;
+      .filter-box {
+        position: absolute;
+        top: calc(100% + 16px);
+        right: 0;
+        padding: 24px;
+        background: #ffffff;
+        -webkit-box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 2px 38px -20px rgba(0, 0, 0, 0.75);
 
-          .filter-content {
-            width: 100%;
-            height: 100%;
-          }
+        border-radius: 16px;
+        width: 500px;
+
+        z-index: 100000;
+
+        .filter-content {
+          width: 100%;
+          height: 100%;
         }
       }
     }

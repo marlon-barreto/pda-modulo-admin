@@ -1,4 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { AiOutlineReload } from 'react-icons/ai';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import { FaFilter } from 'react-icons/fa';
@@ -12,6 +14,7 @@ interface TitleWithButtonsProps {
   reset?: boolean;
   save?: boolean;
   filter?: boolean;
+  filterTitle?: string;
   filterContent?(): React.ReactNode;
   handleSave?(): void;
   handleBack?(): void;
@@ -28,6 +31,7 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
   save,
   filter,
   filterContent,
+  filterTitle,
   handleBack,
   handleSave,
   handleResetPassword,
@@ -44,7 +48,7 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
       <h1>{title}</h1>
       <div className="buttons">
         {filter && (
-          <>
+          <div className="filter-row">
             <button
               type="button"
               className="filter"
@@ -54,15 +58,18 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
                 <FaFilter size={16} color="#fff" />
               </div>
               <p className="text">Filtro</p>
-              {filterActive && (
-                <div className="filter-box">
-                  <div className="filter-content">
-                    {filterContent && filterContent()}
-                  </div>
-                </div>
-              )}
             </button>
-          </>
+            {filterActive && (
+              <div className="filter-box">
+                <div className="filter-header">
+                  <h1>{filterTitle}</h1>
+                </div>
+                <div className="filter-content">
+                  {filterContent && filterContent()}
+                </div>
+              </div>
+            )}
+          </div>
         )}
 
         {back && (

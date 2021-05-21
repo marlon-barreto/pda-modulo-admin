@@ -12,6 +12,7 @@ export const Container = styled.div<ContainerProps>`
     height: 40px;
     display: flex;
     border: 1px solid #e5e5e5;
+    position: relative;
 
     ${props =>
       props.error &&
@@ -31,6 +32,7 @@ export const Container = styled.div<ContainerProps>`
     }
 
     input {
+      max-width: 100%;
       flex: 1;
       height: 100%;
       line-height: 64px;

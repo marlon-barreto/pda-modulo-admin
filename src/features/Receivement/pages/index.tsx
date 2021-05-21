@@ -191,6 +191,7 @@ const Receivement: React.FC = () => {
             <TitleWithButtons
               title="Recebimento de Caminhão"
               filter
+              filterTitle="Opções de Filtro"
               filterContent={() => (
                 <SearchBoxComponent
                   handleSubmit={handleSubmit}
