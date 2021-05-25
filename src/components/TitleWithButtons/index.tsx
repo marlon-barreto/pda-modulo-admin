@@ -3,7 +3,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { AiOutlineReload } from 'react-icons/ai';
 import { IoArrowBackOutline } from 'react-icons/io5';
-import { FaFilter } from 'react-icons/fa';
+import { FaFilter, FaWindowClose } from 'react-icons/fa';
 
 import { Container } from './styles';
 
@@ -38,22 +38,10 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
   handleReset,
 }) => {
   const [filterActive, setFilterActive] = useState(false);
-  const filterBoxRef = useRef<HTMLDivElement>(null);
 
   const handleClickFilterActions = useCallback(() => {
     setFilterActive(!filterActive);
   }, [filterActive]);
-
-  useEffect(() => {
-    window.addEventListener('click', event => {
-      const newTarget = event.target as HTMLDivElement;
-      const button = newTarget.classList.contains('filter-id');
-
-      if (button) return;
-
-      setFilterActive(false);
-    });
-  }, []);
 
   return (
     <Container>
@@ -72,9 +60,12 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
               <p className="text filter-id">Filtro</p>
             </button>
             {filterActive && (
-              <div className="filter-box" ref={filterBoxRef}>
+              <div className="filter-box">
                 <div className="filter-header">
                   <h1>{filterTitle}</h1>
+                  <div className="close" onClick={() => setFilterActive(false)}>
+                    <FaWindowClose size={24} color="#ccc" />
+                  </div>
                 </div>
                 <div className="filter-content">
                   {filterContent && filterContent()}

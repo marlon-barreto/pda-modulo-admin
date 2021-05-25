@@ -127,6 +127,14 @@ export const Container = styled.div`
         padding-bottom: 8px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        .close {
+          &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+          }
+        }
       }
 
       .filter-box {
