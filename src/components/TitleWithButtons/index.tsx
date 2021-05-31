@@ -59,19 +59,17 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
               </div>
               <p className="text filter-id">Filtro</p>
             </button>
-            {filterActive && (
-              <div className="filter-box">
-                <div className="filter-header">
-                  <h1>{filterTitle}</h1>
-                  <div className="close" onClick={() => setFilterActive(false)}>
-                    <FaWindowClose size={24} color="#ccc" />
-                  </div>
-                </div>
-                <div className="filter-content">
-                  {filterContent && filterContent()}
+            <div className={`filter-box ${filterActive ? 'active' : ''}`}>
+              <div className="filter-header">
+                <h1>{filterTitle}</h1>
+                <div className="close" onClick={() => setFilterActive(false)}>
+                  <FaWindowClose size={24} color="#ccc" />
                 </div>
               </div>
-            )}
+              <div className="filter-content">
+                {filterContent && filterContent()}
+              </div>
+            </div>
           </div>
         )}
 

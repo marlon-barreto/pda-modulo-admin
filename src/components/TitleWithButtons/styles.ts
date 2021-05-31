@@ -138,6 +138,11 @@ export const Container = styled.div`
       }
 
       .filter-box {
+        &.active {
+          display: block;
+        }
+
+        display: none;
         position: absolute;
         top: calc(100% + 8px);
         right: 0;
