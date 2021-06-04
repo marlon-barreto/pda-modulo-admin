@@ -38,10 +38,27 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
   handleReset,
 }) => {
   const [filterActive, setFilterActive] = useState(false);
+  const filterRef = useRef<HTMLDivElement>(null);
 
   const handleClickFilterActions = useCallback(() => {
     setFilterActive(!filterActive);
   }, [filterActive]);
+
+  const handleClickOutside = (e: any) => {
+    if (filterRef?.current?.contains(e.target)) {
+      return;
+    }
+
+    setFilterActive(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <Container>
@@ -59,7 +76,10 @@ const TitleWithButtons: React.FC<TitleWithButtonsProps> = ({
               </div>
               <p className="text filter-id">Filtro</p>
             </button>
-            <div className={`filter-box ${filterActive ? 'active' : ''}`}>
+            <div
+              className={`filter-box ${filterActive ? 'active' : ''}`}
+              ref={filterRef}
+            >
               <div className="filter-header">
                 <h1>{filterTitle}</h1>
                 <div className="close" onClick={() => setFilterActive(false)}>

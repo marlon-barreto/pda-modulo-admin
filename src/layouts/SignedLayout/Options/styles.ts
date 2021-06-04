@@ -15,6 +15,12 @@ export const Container = styled.div<ContainerProps>`
     border: 2px solid rgba(70, 78, 95, 0.32);
   }
 
+  .image {
+    border-radius: 50%;
+    background: transparent;
+    height: 40px;
+  }
+
   .options {
     display: ${props => (props.options ? 'block' : 'none')};
     z-index: 10;

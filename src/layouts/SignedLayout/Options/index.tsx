@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { IoIosLogOut } from 'react-icons/io';
 
@@ -11,6 +11,7 @@ const Options: React.FC = () => {
   const [options, setOptions] = useState(false);
   const history = useHistory();
   const { signOut } = useAuth();
+  const headerRef = useRef<HTMLDivElement>(null);
 
   const Logout = useCallback(() => {
     history.push('/');
@@ -18,11 +19,36 @@ const Options: React.FC = () => {
     signOut();
   }, [history, signOut]);
 
+  const handleClickOutside = (e: any) => {
+    if (headerRef?.current?.contains(e.target)) {
+      console.log('dentro');
+      return;
+    }
+
+    console.log('fora');
+
+    setOptions(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <Container options={options} onClick={() => setOptions(!options)}>
+    <Container options={options}>
       <div className="icon">
-        <img src={PersonIcon} alt="Nome" />
-        <div className="options">
+        <button
+          className="image"
+          type="button"
+          onClick={() => setOptions(!options)}
+        >
+          <img src={PersonIcon} alt="Nome" />
+        </button>
+        <div className="options" ref={headerRef}>
           <button type="button" className="logout" onClick={Logout}>
             <div className="text">
               <p>Logout</p>
